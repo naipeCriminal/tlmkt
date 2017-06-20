@@ -1,0 +1,919 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport",content="width=device-width, initial-scale=1")
+		meta(name="description",content="")
+		meta(name="author",content="")
+		title Cotizador de...
+		link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
+		link(rel='stylesheet', href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
+		link(rel="stylesheet",href="style.css")
+	body
+		.callme
+			br
+			p.text-center Tengo dudas, Llámenme
+		hr
+		h1 pasos
+		.steps
+			.container
+				.row
+					.col-md-offset-1.col-md-2.step.complete
+						.ico.registra
+						h3.text-center registro
+					.col-md-2.step.active
+						.ico.cotiza
+						h3.text-center cotiza
+					.col-md-2.step
+						.ico.valida
+						h3.text-center cuestionario
+					.col-md-2.step
+						.ico.contrata
+						h3.text-center contrata
+					.col-md-2.step
+						.ico.poliza
+						h3.text-center póliza
+		hr
+		
+		.ayuda.azul(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje')
+		h1 registro
+		h2.subtitulo ingreso de datos
+		
+		.container.bgwhite
+			form
+				.row
+					.col-md-12
+						h2.subt Para conocer la opción de Hogar que tenemos para ti, por favor completa los siguientes campos:
+						input(type="checkbox",id="checkbox-1" class="regular-checkbox big-checkbox")
+						label(for="checkbox-1")
+						a#AvPriv(target='_BLANK',href='#', data-toggle='modal', data-target='#myModalAvPriv', data-trigger='hover') Aviso de Privacidad
+							br
+						br
+						small
+							u * Campos obligatorios
+						h4 Datos personales
+				
+					.col-md-4
+						input.registro.form-control(type='text', placeholder='Nombre (s)')
+					.col-md-4
+						input.registro.form-control(type='text', placeholder='Apellido paterno * ')
+					.col-md-4
+						input.registro.form-control(type='text', placeholder='Apellido materno *')
+					.col-md-4
+						input.registro.form-control(type='text', placeholder='Correo electrónico *')
+				.row
+					.col-md-12
+						h4 Domicilio
+				.row
+					.col-md-4
+						input.registro.form-control(type='text', placeholder='Calle * ')
+					.col-md-4
+						input.registro.form-control(type='text', placeholder='No.Ext *')
+					.col-md-4
+						input.registro.form-control(type='text', placeholder='No.Int')
+					.col-md-4
+						input.registro.form-control(type='text', placeholder='C.P. *')
+					.col-md-4
+						select.registro.form-control
+							option(value="opcion-1") Colonia * 
+							option(value="opcion-2") b
+							option(value="opcion-3") c
+							option(value="opcion-4") d
+							option(value="opcion-5") e
+					.col-md-4
+						input.registro.form-control(type='text', placeholder='Delegación/Municipio * ')
+					.col-md-4
+						input.registro.form-control(type='text', placeholder='Ciudad *')
+				.row
+					.col-md-12
+						h4(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje') Suma asegurada
+							span.ayuda.azul
+					.col-md-4
+						select.registro.form-control
+							option(value="opcion-1") Elige la suma asegurada *
+							option(value="opcion-2") b
+							option(value="opcion-3") c
+							option(value="opcion-4") d
+							option(value="opcion-5") e
+				.row
+					.col-md-12.text-center
+						button.registro.btn-lg.btn-solid cotizar
+		// Modal
+		#myModalAvPriv.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+			.modal-dialog(role='document')
+				.modal-content
+					//.modal-header
+						button.close(type='button', data-dismiss='modal', aria-label='Close')
+							span(aria-hidden='true') ×
+						h4#myModalLabel.modal-title Modal title
+					.modal-body.text-center
+						h4
+							strong	Aviso de privacidad
+						h2.subt Seguros BBVA Bancomer, S,A de CV. Grupo Financiero BBVA BAncomer, Montes Urales 620, 2do piso Col.Lomas de Chapultepec, Del.Miguel Hidalgo, 11000, D.F recaba tus datos para verificar tu identidad. El aviso de privacidad Integral actualizado está en cualquiera de nuestras oficinas y en 
+							a(target="_BLANK",href="https://www.segurosbancomer.com.mx/seguros/tleu/segurosban/index.jsp") www.segurosbancomer.com.mx
+						br
+
+						button.btn-lg.btn-solid.text-center(type='button', data-dismiss='modal') Aceptar
+
+
+		hr
+		h1 cotiza
+		.container
+			.row
+				h2.subtitulo COTIZACIÓN
+		.container.bgwhite
+			form
+				.row
+					.col-md-12
+						h2.subt
+							strong Hola XXXXXX
+							, estas son las opciones que encontramos para tí:
+				.row
+					.col-md-7
+						.bqplanes.a.active
+							.row
+								.col-md-8
+									h2
+										.radio
+											input.planAB(type='radio',id="radio-1",name='planes',value='option1',checked='true' class="regular-radio")
+											label(for='radio-1')
+											span	Plan A
+								.col-md-4
+									h2 $3,000.°°
+							.row
+								.col-md-12
+									ul
+										h3 Coberturas
+										li(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje') -.-.-.-.
+											span.ayuda.azul
+										li(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje') -.-.-.-.
+											span.ayuda.azul
+										li(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje') -.-.-.-.
+											span.ayuda.azul
+									h4.text-center Ver detalle del producto
+					.col-md-5
+						.bqplanes.b
+							.row
+								.col-md-8
+									h2
+										.radio
+											input.planAB(type='radio',id="radio-2",name='planes',value='option2' class="regular-radio")
+											label(for='radio-2')
+											span	Plan B
+								.col-md-4
+									h2 4,500.°°
+							.row
+								.col-md-12
+									ul
+										h3.text-left Cobertura
+										li(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje') -.-.-.-.
+											span.ayuda.azul
+										li(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje') -.-.-.-.
+											span.ayuda.azul
+										li(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje') -.-.-.-.
+											span.ayuda.azul
+									h4.text-center Ver detalle del producto
+
+				.row.bggris.planes
+					.a
+						.triangulo
+					.b
+						.triangulo
+					.col-md-12
+							h4 Elige el plan que más te convenga:
+					.col-md-6
+						h2.subt Pagos por prima
+						h4 Con terremoto
+						.row.plan.active
+							.col-md-5
+								button.btn.btn-info.bigbutton(type='button')
+									.triangulo
+									h4  $ 250.00
+									p.label Mensual
+							.col-md-6
+								ul.list-group
+									.triangulo
+										.triangulo2
+									li.list-group-item
+										span.badge 
+											strong $250.00
+										p.label + 
+											strong 11
+											span  pago subsecuente de:
+									li.list-group-item.tp
+										span.badge 
+											strong $3,000.00
+										p.label Total a pagar:
+						.row.plan
+							.col-md-5
+								button.btn.btn-info.bigbutton(type='button')
+									.triangulo
+									h4 $ 750.00
+									p.label Trimestral
+							.col-md-6
+								ul.list-group
+									.triangulo
+										.triangulo2
+									li.list-group-item
+										span.badge 
+											strong $750.00
+										p.label + 
+											strong 3
+											span  pago subsecuente de:
+									li.list-group-item.tp
+										span.badge 
+											strong $3,000.00
+										p.label Total a pagar:
+						.row.plan
+							.col-md-5
+								button.btn.btn-info.bigbutton(type='button')
+									.triangulo
+									h4 $ 1,500.00 
+									p.label Semestral
+							.col-md-6
+								ul.list-group
+									.triangulo
+										.triangulo2
+									li.list-group-item
+										span.badge 
+											strong $1,500.00
+										p.label + 
+											strong 1
+											span  pago subsecuente de:
+									li.list-group-item.tp
+										span.badge 
+											strong $3,000.00
+										p.label Total a pagar:
+						.row.plan
+							.col-md-5
+								button.btn.btn-info.bigbutton(type='button')
+									.triangulo
+									h4 $ 3,000.00 
+									p.label Anual		
+							.col-md-6
+								ul.list-group
+									.triangulo
+										.triangulo2
+									li.list-group-item
+										span.badge 
+											strong $3,000.00
+										p.label Como 
+											strong pago único 
+											span de:
+											br
+										br
+									li.list-group-item.tp
+										span.badge 
+											strong $3,000.00
+										p.label Total a pagar:
+					.col-md-6
+						h2.subt Pagos por prima
+						h4 Sin terremoto			
+						.row.plan
+							.col-md-5
+								button.btn.btn-info.bigbutton(type='button')
+									.triangulo
+									h4 $ 200.00 
+									p.label Mensual
+							.col-md-6
+								ul.list-group
+									.triangulo
+										.triangulo2
+									li.list-group-item
+										span.badge 
+											strong $200.00
+										p.label + 
+											strong 11
+											span  pago subsecuente de:
+									li.list-group-item.tp
+										span.badge 
+											strong $2,400.00
+										p.label Total a pagar:
+						.row.plan
+							.col-md-5
+								button.btn.btn-info.bigbutton(type='button')
+									.triangulo
+									h4 $ 800.00 
+									p.label Trimestral
+							.col-md-6
+								ul.list-group
+									.triangulo
+										.triangulo2
+									li.list-group-item
+										span.badge 
+											strong $800.00
+										p.label + 
+											strong 3
+											span  pago subsecuente de:
+									li.list-group-item.tp
+										span.badge 
+											strong $2,400.00
+										p.label Total a pagar:
+						.row.plan
+							.col-md-5
+								button.btn.btn-info.bigbutton(type='button')
+									.triangulo
+									h4 $ 1,200.00 
+									p.label Semestral
+							.col-md-6
+								ul.list-group
+									.triangulo
+										.triangulo2
+									li.list-group-item
+										span.badge 
+											strong $1,200.00
+										p.label + 
+											strong 1
+											span  pago subsecuente de:
+									li.list-group-item.tp
+										span.badge 
+											strong $2,400.00
+										p.label Total a pagar:
+						.row.plan
+							.col-md-5
+								button.btn.btn-info.bigbutton(type='button')
+									.triangulo
+									h4 $ 2,400.00 
+									p.label Anual		
+							.col-md-6
+								ul.list-group
+									.triangulo
+										.triangulo2
+									li.list-group-item
+										span.badge 
+											strong $2,400.00
+										p.label Como 
+											strong pago único 
+											span de:
+											br
+										br
+									li.list-group-item.tp
+										span.badge 
+											strong $2,400.00
+										p.label Total a pagar:
+				.row
+					br
+					br
+					.col-md-6.text-right
+						button.btn-lg.btn-borde NO ME INTERESA
+					.col-md-6.text-left
+						button.btn-lg.btn-solid CONTINUAR
+
+		//- // Modal
+		//- #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+		//- 	.modal-dialog(role='document')
+		//- 		.modal-content
+		//- 			//.modal-header
+		//- 				button.close(type='button', data-dismiss='modal', aria-label='Close')
+		//- 					span(aria-hidden='true') ×
+		//- 				h4#myModalLabel.modal-title Modal title
+		//- 			.modal-body
+		//- 				h4
+		//- 					strong
+		//- 						¡Buena elección!
+		//- 				p Para poder continuar y proteger tu informacion es importante que leas y aceptes las politicas de provacidad .
+		//- 				.checkbox
+		//- 					label
+		//- 						input(type='checkbox')
+		//- 						a(target="_BLANK",href="#") Aviso de Privacidad
+		//- 				h5 he leído y conozco el alcance del tratamiento de mis datos personales.
+		//- 				button.btn-lg.btn-solid.text-center aceptar
+
+		hr
+		h1 cuestionario
+		.container
+			.row
+				h2 CUESTIONARIO
+		.container.bgwhite
+			.row
+				h2.subt Por favor responde las siguientes preguntas:
+			form
+				.row
+					.col-md-offset-8.col-md-2.text-center
+						strong SI
+					.col-md-2.text-center
+						strong NO
+				.row
+					.col-md-8
+						p.label ¿El inmueble por asegurar se encuentra auna distancia menor a 500 metros respecto a cualquier fuente de agua (lago, río, mar, etc.)?
+					.col-md-2
+						.radio.text-center
+							input(type='radio',id="radio-C1",name='cuestionarioP1',value='si', class="regular-radio",checked='true')
+							label(for='radio-C1')
+					.col-md-2
+						.radio.text-center
+							input(type='radio',id="radio-Cp1",name='cuestionarioP1',value='no', class="regular-radio")
+							label(for='radio-Cp1')
+				.row
+					.col-md-8
+						p.label ¿Los muros están construidos de tabique, ladrillo, block o concreto armado?
+					.col-md-2
+						.radio.text-center
+							input(type='radio',id="radio-C2",name='cuestionarioP2',value='si', class="regular-radio",checked='true')
+							label(for='radio-C2')
+					.col-md-2
+						.radio.text-center
+							input(type='radio',id="radio-Cp2",name='cuestionarioP2',value='no', class="regular-radio")
+							label(for='radio-Cp2')
+				.row
+					.col-md-8
+						p.label ¿Los techos están construidos de concreto armado o bóveda de ladrillo?
+					.col-md-2
+						.radio.text-center
+							input(type='radio',id="radio-C3",name='cuestionarioP3',value='si', class="regular-radio",checked='true')
+							label(for='radio-C3')
+					.col-md-2
+						.radio.text-center
+							input(type='radio',id="radio-Cp3",name='cuestionarioP3',value='no', class="regular-radio")
+							label(for='radio-Cp3')
+				.bgazul.valida
+					.triangulo
+					.row
+						.form-inline
+							.col-md-12
+								h4 El domicilio a asegurar es:
+					.row
+						.col-md-6.text-center
+							.ico.house
+							.radio
+								input.pregDom(type='radio',id="radio-domC",name='cuestionarioP4',value='Casa', class="regular-radio",checked='true')
+								label(for='radio-domC')
+								label 
+									h4 Casa
+							.col-md-12.casa
+								.col-md-8.text-right
+									p.label
+										strong ¿Cuántos pisos tiene la casa?
+								.col-md-3
+									input.form-control(type='text', placeholder='# Pisos ')
+
+						.col-md-6.text-center
+							.ico.depa
+							.radio
+								input.pregDom(type='radio',id="radio-domD",name='cuestionarioP4',value='Dep', class="regular-radio")
+								label(for='radio-domD')
+								label 
+									h4 Departamento
+							.col-md-12.edificio
+								.col-md-8.text-right
+									p.label
+										strong ¿Cuántos pisos tiene el edificio?
+								.col-md-3
+									input.form-control(type='text', placeholder='# Pisos ')
+								.col-md-8.text-right
+									p.label
+										strong ¿En qué piso vives?
+								.col-md-3
+									input.form-control(type='text', placeholder='# Pisos ')
+				.row
+					br
+					br
+					.col-md-6.text-right
+						button.btn-lg.btn-borde REGRESAR
+					.col-md-6.text-left
+						button.btn-lg.btn-solid(type='button', data-toggle='modal', data-target='#myModalDmc') CONTINUAR
+			// Modal
+		#myModalDmc.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+			.modal-dialog.modal-lg(role='document')
+				.modal-content
+					//.modal-header
+						button.close(type='button', data-dismiss='modal', aria-label='Close')
+							span(aria-hidden='true') ×
+						h4#myModalLabel.modal-title Modal title
+					.modal-body.text-center
+						.row.text-left
+							.col-md-2.text-right
+								input(type="checkbox",id="checkbox-modal" class="regular-checkbox big-checkbox", checked="true")
+								label(for="checkbox-1")
+							.col-md-6
+								h2 ¡Felicidades!
+						br
+						h4 Tu cotización se ha realizado de manera correcta con el folio 
+							strong 123456789A
+							, el cual te recomendamos conserves para futuras consultas
+						br
+						button.btn-lg.btn-solid(type='button', data-dismiss='modal') Aceptar
+					//.modal-footer
+						button.btn.btn-default(type='button', data-dismiss='modal') Close
+						button.btn.btn-primary(type='button') Save changes
+
+		hr
+		h1 contrata
+		.container
+			.row
+				h2 CONTRATA
+		.container.bgwhite
+			.row
+				.col-md-12
+					P Para contratar tu póliza es necesario completar la información que se solicita a continuación:
+						.space
+					h4 Datos personales
+					br
+				form
+					.row
+						.col-md-8
+							.col-md-6
+								.form-group
+									p.label Apellido Paterno
+									input.form-control(type="text",placeholder="Email")
+								.form-group
+									p.label Nombre(s)
+									input.form-control(type="text",placeholder="Nombre(s)")
+								.form-group
+									p.label CURP*
+									input.form-control(type="text",placeholder="CURP")
+								.form-group
+									p.label Correo electronico
+									input.form-control(type="text",placeholder="Correo electronico")
+							.col-md-6
+								.form-group
+									p.label Apellido Materno
+									input.form-control(type="text",placeholder="Apellido Materno")
+							.col-md-6
+								.form-inline
+									p.label Genero*
+									br
+									p.label
+										input(type='radio',id="radio-cs",name='optionsRadios', value='femenino', checked='' class="regular-radio")
+										label(for='radio-cs')
+										| Femenino
+									p.label
+										input(type='radio',id="radio-cs2",name='optionsRadios', value='masculino',class="regular-radio")
+										label(for='radio-cs2')
+										| Masculino
+								.space
+								.form-group
+									p.label R.F.C*
+									input.form-control(type="text",placeholder="RFC")
+							.row
+								.col-md-12
+									.col-md-8
+										h4 Domicilio
+									.col-md-6
+										.form-group
+											p.label Calle
+											input.form-control(type="text",placeholder="Calle")
+									.col-md-3
+										.form-group
+											p.label No. Exterior
+											input.form-control(type="text",placeholder="Apellido Materno")
+									.col-md-3
+										.form-group
+											p.label no. Int
+											input.form-control(type="text",placeholder="No. Int")
+									.col-md-6
+										.form-group
+											p.label C.P*
+											input.form-control(type="text",placeholder="Codigo postal")
+									.col-md-6
+										p.label Colonia
+										select.form-control
+											option(value="opcion-1") Colonia
+											option(value="opcion-2") b
+											option(value="opcion-3") c
+											option(value="opcion-4") d
+											option(value="opcion-5") e
+									.col-md-6
+										.form-group
+											p.label Delegación/municipio
+											input.form-control(type="text",placeholder="Delegación/municipio")
+									.col-md-6
+										.form-group
+											p.label Ciudad
+											input.form-control(type="text",placeholder="Ciudad")
+									.col-md-6
+										.form-group
+											p.label Estado
+											input.form-control(type="text",placeholder="Estado")
+									.col-md-6
+										.form-group
+											p.label Teléfono fijo
+											input.form-control(type="text",placeholder="Teléfono fijo")
+									.col-md-6
+										.form-group
+											p.label Teléfono movil
+											input.form-control(type="text",placeholder="Teléfono movil")
+							.col-md-12
+								.form-inline
+									p ¿Deseas recibir tu póliza en el domicilio registrado?
+									.col-md-2
+										input(type='radio',id="radiopd",name='domicilio',value='Si', class="regular-radio",checked='')
+										label(for='radiopd')
+										label Si
+									.col-md-2
+										input(type='radio',id="radiopdm",name='domicilio',value='No', class="regular-radio")
+										label(for='radiopdm')
+										label No
+
+						.col-md-4.bgazul1.r-row
+							.col-md-12
+								p.bgazul4 No. de cotización: 
+									strong  123456789A
+							
+							h1 Plan B
+							h4 Cobertura
+							ul.list-group
+								li.list-group-item
+									span.badge $1,200.00
+									p.label Cobertura
+								li.list-group-item
+									span.badge $1,200.00
+									p.label Cobertura
+							br
+							ul.list-group
+								li.list-group-item
+									span.badge mensual
+									p.label Periodo
+								li.list-group-item
+									span.badge mensual
+									p.label Periodo
+								li.list-group-item
+									span.badge mensual
+									p.label Periodo
+							.space
+							.col-md-12.text-center
+								button.btn-lg.btn-borde CAMBIAR COTIZACIÓN
+								.space
+							//.col-md-12.text-center
+								button.btn-lg.btn-borde CONTRATAR VIA TELEFÓNICA
+					.row.text-center
+						.space
+						.col-md-12
+							button.btn-lg.btn-solid CONTINUAR
+		//- button.btn-lg.btn-solid(type='button', data-toggle='modal', data-target='#myModal2') CONTINUAR					
+		//- 	// Modal
+		//- #myModal2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+		//- 	.modal-dialog(role='document')
+		//- 		.modal-content
+		//- 			//.modal-header
+		//- 				button.close(type='button', data-dismiss='modal', aria-label='Close')
+		//- 					span(aria-hidden='true') ×
+		//- 				h4#myModalLabel.modal-title Modal title
+		//- 			.modal-body.text-center
+		//- 				h4 Te solicitamos que ingreses tu número telefonico y un horario adecuado para contactarte
+		//- 				.col-md-12.text-center
+		//- 					.col-md-3
+		//- 					.col-md-5
+		//- 						p.label Número telefonico
+		//- 						input#contrata.form-control(type='text' placeholder='55-98-98-98')
+		//- 				.col-md-12.text-center
+		//- 					.col-md-3
+		//- 					.col-md-5
+		//- 						p.label Horario a contactar
+		//- 						input#contrata.form-control(type='text' placeholder='12:00-16:00')
+		//- 				button.btn-lg.btn-borde CONTACTARME
+		//- 			//.modal-footer
+		//- 				button.btn.btn-default(type='button', data-dismiss='modal') Close
+		//- 				button.btn.btn-primary(type='button') Save changes
+		.container
+			.row
+				h2 PAGO DE CONTRATACIÓN
+		.container.bgazul2.contrata
+			.row
+				.col-md-8
+					h2.subt RESUMEN DE CONTRATACIÓN
+				.col-md-4.bqblanco
+					.col-xs-6
+						h6 No. de cotización.
+					.col-xs-6.text-right
+						h4 123456789A
+			.row
+				.col-md-12
+					h4 DATOS DEL CONTRATANTE
+			.row
+				.col-md-3
+					p.label Nombre del cliente
+					p.dato XRamiréz Ayala Juan LuisX
+				.col-md-3
+					p.label Género
+					p.dato Femenino
+				.col-md-3
+					p.label Fecha de nacimiento
+					p.dato 23/10/1985
+				.col-md-3
+					p.label País de nacimiento
+					p.dato México
+			.row
+				.col-md-3
+					p.label Entidad federativa
+					p.dato CDMX
+				.col-md-3
+					p.label CURP
+					p.dato XRAYU123412MMDH09X
+				.col-md-3
+					p.label RFC
+					p.dato XRAYU123412MMX
+				.col-md-3
+					p.label Correo eléctronico
+					p.dato Xjuan@mail.comX
+			.row
+				.col-md-12
+					h4 DOMICILIO DEL CONTRATANTE
+					P.dato.wig Exploradores Tonatiuh No. 304, Col. Alamos, C.p. 034500, Bénito Juárez, CDMX.
+		.container.bgazul3.resumen
+			.row
+				.col-md-12
+					h4 DETALLE DEL SEGURO DE HOGAR
+			.row
+				.col-md-2
+					h1 Plan B
+				.col-md-10
+					h1 $3,000.°°
+			.row
+				.col-md-3
+					h5 Cobertura
+					ul
+						li -.Hola-.-.-
+						li -.-.--.-
+						li -.-.-.-.					
+				.col-md-2
+					h4 Periodo
+					p.dato Mensual
+				.col-md-2
+					h4 Primer pago
+					p.dato $250.00
+				.col-md-3
+					h4 Pagos subsecuentes 11 pagos de
+					p.dato $250.00
+				.col-md-2
+					h4 Total a pagar
+					p.dato $3,000.00
+		.container.bgazul5.envioPoliza
+			.row
+				.col-md-8
+					h4 Envío de póliza
+			.row
+				.col-md-12
+					.col-md-12
+						h2.subt Selecciona el medio por el cual quieres recibir tu póliza.
+			.row
+				.col-md-12
+					.col-md-2
+						input.entregaP(type="radio",name='medioRecibo',value='Correo', checked="true")
+						label Correo eléctronico
+					.col-md-2
+						input.entregaP(type="radio",id="radioEnvio",name='medioRecibo',value='Domicilio')
+						label Domicilio
+					.col-md-3
+						input.entregaP(type="radio",name='medioRecibo',value='Consulta')
+						label Consulta portal Seguros
+					.col-md-2
+						input.entregaP(type="radio",name='medioRecibo',value='SAC')
+						label Comunicar al SAC
+			.row.envio
+				br
+				.col-md-12
+					.col-md-12
+						p ¿El domicilio es el mismo con el que está registrado el inmueble?
+					.row
+						.col-md-12
+							.col-md-1
+								input(type="radio",name='registro',value='Si')
+								label Si
+							.col-md-1
+								input(type="radio",name='registro',value='No')
+								label No
+						.col-md-6
+							.col-md-4
+								.form-group
+									h5.label Hora de entrega
+									input.form-control(type="text",placeholder="12:00 pm")
+					.row
+						.col-md-12
+							.col-md-6
+								.form-group
+									h5.label Detalle (Entre que calles se encuentran)
+									input.form-control(type="textarea",placeholder="Entre Pianini y Motolinia")
+		.container.bgwhite
+			.space
+			form
+				.row
+					.col-md-12
+						h4 COMPRAR
+						h2.subt Para realizar tu compra y descargar tu póliza, es necesario que ingreses los siguientes datos.
+				.row
+					.col-md-12
+						input(type="checkbox",id="checkbox-Acepto" class="regular-checkbox big-checkbox")
+						label(for="checkbox-Acepto")
+						span Acepto los	
+							a(target="_BLANK",href="#") Términos y condiciones
+				.row
+					br
+					.col-md-6
+						.col-md-10
+							p.label Nombre del titular
+							input#contrata.form-control(type='text' placeholder='Escribe tu nombre')
+					.col-md-6
+						.col-md-10
+							p.label Tipo de tarjeta*
+							select.form-control
+								option(value="opcion-1") VISA
+								option(value="opcion-2") b
+								option(value="opcion-3") c
+								option(value="opcion-4") d	
+				.row
+					.col-md-6
+						.col-md-10
+							p.label No. de tarjeta*
+							input#contrata.form-control(type='text' placeholder='12312341234234123')
+					.col-md-6
+						.col-md-10
+							p.label(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje') CVV*
+								span.ayuda.azul
+
+							input#contrata.form-control(type='text' placeholder='000')
+				.row
+					.col-md-6
+						.col-md-12
+							p.label Fecha de vencimiento*
+						.col-md-4
+							select.form-control
+								option(value="opcion-1") 06
+								option(value="opcion-2") b
+								option(value="opcion-3") c
+								option(value="opcion-4") d
+						.col-md-6
+							select.form-control
+								option(value="opcion-1") 2019
+								option(value="opcion-2") b
+								option(value="opcion-3") c
+								option(value="opcion-4") d
+					.col-md-6
+						.col-md-12
+							p.label Tarjeta
+						.col-md-3
+							input(type="radio",name='tarjeta',value='BBVA', checked="")
+							label Bancomer
+						.col-md-3
+							input(type="radio",name='tarjeta',value='No')
+							label Otros bancos
+				.row
+					.col-md-12
+						p.label Meses sin intereses
+					.col-md-12
+						.col-md-2
+							input(type="radio",name='meses',value='3', checked="")
+							label 3 meses
+						.col-md-2
+							input(type="radio",name='meses',value='6')
+							label 6 meses
+						.col-md-2
+							input(type="radio",name='meses',value='9')
+							label 9 meses
+						.col-md-2
+							input(type="radio",name='meses',value='12')
+							label 12 meses		
+				.row
+					br
+					.col-md-6.text-right
+						button.btn.lg.btn-borde REGRESAR
+					.col-md-6.text-left
+						button.btn.lg.btn-solid PAGAR
+
+
+		hr
+		h1 poliza
+		.container.bgazul1.poliza
+			.row
+				.exito
+				.space
+			.row
+				.col-md-12.text-center
+					h2 ¡FELICIDADES XXXXXXX XXXX!
+			.row
+				.col-md-12.text-center
+					h3 ¡Has contratado tu seguro 
+						span.verde exitosamente!
+			.row
+				.col-md-12.text-center
+					h4 Tu póliza se ha generado de manera correcta, la cual será enviada a tu domicilio seleccionado.
+					br
+			.row
+				.space
+				.col-md-12.text-center
+						p
+							span.bgazul4 No. PÓLIZA: 
+								strong 24689012
+			.row
+				.space
+				.space
+			.row
+				.col-md-12
+					.col-md-1.text-right.info
+						img(src="../assets/img/ico_aviso.png", alt="")
+					.col-md-10
+						h5 Aplican restricciones y exlusiones, para dudas y aclaraciones, ingresa a www.segurosbancomer.com o llama al Centro de Servicio al Cliente: CDMX y zona metropolitana 11020000, interior de la República (0155) 11020000
+			.space
+		.container
+			.row.bgwhite
+				.col-md-12.text-center
+					button.btn-lg.btn-solid DESCARGAR PDF
+				.space
+				.space
+		hr
+
+	script(src="http://code.jquery.com/jquery.js")
+	script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+	script(src="../js/app.js")
+	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")

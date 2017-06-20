@@ -1,0 +1,19 @@
+{
+  "name": "firstgrunt",
+  "version": "1.0.0",
+  "description": "proyecto test",
+  "main": "index.js",
+  "scripts": {
+    "test": "error no test"
+  },
+  "author": "elvis gabriel",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-jade": "^1.0.0",    
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-cssmin": "^2.0.0",
+    "grunt-contrib-uglify": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
