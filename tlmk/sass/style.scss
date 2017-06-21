@@ -42,9 +42,19 @@ $stepcompletespanbg:$azul1;
 $stepcompletespan:$azul1;
 $stepcompleteh3:$azul1;
 
+.mod-car{
+	.mod-anio,.mod-marca,.mod-modelo{
+		overflow: scroll;
+		height: 270px;
+	}
+}
+
 body{
 	background: $gris6;
 
+}
+.borde{
+	border:solid 1px $azul3;
 }
 .callme{
 	p{
@@ -170,66 +180,6 @@ ul.list-group{
 			}
 		} 
 }
-.planes .plan.active {
-	& .btn-info,.planes .plan.active .btn-info.active:hover {
-	    color: #fff;
-	    background-color: $azul2;
-	    border-color: $azul2;
-	    & h4{
-
-	    }
-	}
-	& .btn-info .triangulo{
-		top: 15px;
-		margin: 0 auto;
-		width: 0;
-		height: 0;
-		border-right: 20px solid transparent;
-		border-left: 20px solid transparent;
-		border-bottom: 20px solid $azul2;
-		position: absolute;
-		right: -34px;
-	}
-
-	& ul.list-group{
-	    border: 3px solid $azul2;
-		& .triangulo{
-			top: 18px;
-			margin: 0 auto;
-			width: 0;
-			height: 0;
-			border-right: 13px solid transparent;
-			border-left: 13px solid transparent;
-			border-bottom: 13px solid $azul2;
-			position: absolute;
-			left: -20px;
-			z-index: 10;
-		}
-		& .triangulo2{
-			top: 5px;
-			margin: 0 auto;
-			width: 0;
-			height: 0;
-			border-right: 13px solid transparent;
-			border-left: 13px solid transparent;
-			border-bottom: 13px solid $gris6;
-			position: absolute;
-			left: -13px;
-			z-index: 10;
-		}
-	}
-}
-.planes .triangulo{
-		top: -20px;
-		margin: 0 auto;
-		width: 0;
-		height: 0;
-		border-right: 20px solid transparent;
-		border-left: 20px solid transparent;
-		border-bottom: 20px solid transparent;
-		position: absolute;
-		right: 170px;
-}
 .bigbutton{
 	// padding: 20px;
 	width: 100%;
@@ -260,37 +210,7 @@ ul.list-group{
 	outline: none;
 	color:#fff;
 }
-.r-row{
-	padding: 10px;
-	.bgazul4{
-		border-bottom: none;
-	}
-	p.bgazul4{
-			padding: 5px;
-		}
-	h4,h1{
-		color:#fff;
-	}
-	p{
-		color:#fff;
-	}
-	ul.list-group{
-		border: 1px solid transparent;
-	}
-	    
-	.list-group-item {
-	    position: relative;
-	    display: block;
-	    padding: 10px 15px;
-	    margin-bottom: -1px;
-	    background-color: transparent;
-	    border: 1px solid transparent;
-	    	.badge,.label{
-				color:#fff;
-			}
-	}	
 
-}
 .bgazul1{
 	background-color: $azul2;
 	border-bottom: 1px solid #fff;
