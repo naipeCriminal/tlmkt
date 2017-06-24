@@ -1,0 +1,629 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport",content="width=device-width, initial-scale=1")
+		meta(name="description",content="")
+		meta(name="author",content="")
+		title Cotizador de...
+		link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
+		link(rel='stylesheet', href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
+		link(rel="stylesheet",href="style.css")
+		link(rel="stylesheet",href="../fonts/font.css")
+	body
+		.callme
+			br
+			p.text-center Tengo dudas, Llámenme
+		hr
+		h1 pasos
+		.steps
+			.container
+				.row
+					.col-md-4.step.complete
+						.ico.registra
+						h3.text-center Cotizar
+					.col-md-4.step.active
+						.ico.cotiza
+						h3.text-center Configurar
+					.col-md-4.step
+						.ico.valida
+						h3.text-center Formalizar
+		hr
+		
+
+		.container.bgwhite
+			.row
+				form
+					.col-md-offset-1.col-md-10.form-group.text-left
+						h4 Buscar folio
+						hr
+						.col-md-4
+							.input-group
+								.input-group-addon
+									span.glyphicon.glyphicon-list-alt(aria-hidden='true')
+								input#exampleInputAmount.form-control(type='text', placeholder='Folio')
+					.col-md-offset-1.col-md-10
+						h4 Datos Basicos cotización
+						hr
+						.col-md-4
+							label Nombre
+							input#nombretkm.form-control(type="text",nombre="nombretkm", placeholder='Nombre')
+						.col-md-4
+							label Apellido Paterno
+							input#ApellidoPaternotkm.form-control(type="text",nombre="Apellido Paternotkm", placeholder='Apellido Paterno')
+						.col-md-4
+							label Apellido Materno
+							input#ApellidoMaternotkm.form-control(type="text",nombre="Apellido Maternotkm", placeholder='Apellido Materno')
+						.col-md-4
+							label Teléfono
+							input#teletkm.form-control(type="text",nombre="teletkm", placeholder='Teléfono')
+						.col-md-4
+							label E-mail
+							input#mailtkm.form-control(type="text",nombre="mailtkm", placeholder='E-mail')
+					.col-md-offset-1.col-md-10
+						hr
+						.col-md-8
+							h4 Suma asegurar:
+							select#uso.form-control
+											option(value="opcion-1",nombre="") 1,000.00°°
+											option(value="opcion-2",nombre="") b
+											option(value="opcion-3",nombre="") c
+											option(value="opcion-4",nombre="") d
+											option(value="opcion-5",nombre="") e
+					.col-md-offset-1.col-md-10.text-left
+						hr
+						.col-md-4
+							.ico.house
+							.radio
+								input.pregDom(type='radio',id="radio-Casa",name='cuestionarioP4',value='Casa', class="regular-radio",checked='true')
+								label(for='radio-domC')
+								label 
+									h4 Casa
+						.col-md-4
+							.ico.depa
+							.radio
+								input.pregDom(type='radio',id="radio-Depto",name='cuestionarioP4',value='Depto', class="regular-radio")
+								label(for='radio-domD')
+								label 
+									h4 Depto
+			.row
+				.col-md-offset-1.col-md-10
+					hr
+					.mod-car
+						.col-md-2
+							h4 Año
+							.mod-anio.borde
+								ul
+									li
+										a(href="#") 1989
+									li
+										a(href="#") 1989
+									li
+										a(href="#") 1989
+									li
+										a(href="#") 1989
+									li
+										a(href="#") 1989
+									li
+										a(href="#") 1989
+									li
+										a(href="#") 1989
+									li
+										a(href="#") 1989
+									li
+										a(href="#") 1989
+									li
+										a(href="#") 1989
+									li
+										a(href="#") 1989
+									li
+										a(href="#") 1989
+									li
+										a(href="#") 1989
+									li
+										a(href="#") 1989
+									li
+										a(href="#") 1989
+						.col-md-7
+							h4 Marca
+							.mod-marca.borde
+								.col-md-4
+									div
+										img(src="https://i.blogs.es/96633b/140013_cor/450_1000.jpg",width=30)
+										h4.txtmarca ferrari
+								.col-md-4
+									div
+										img(src="https://i.blogs.es/96633b/140013_cor/450_1000.jpg",width=30)
+										h4.txtmarca ferrari
+								.col-md-4
+									div
+										img(src="https://i.blogs.es/96633b/140013_cor/450_1000.jpg",width=30)
+										h4.txtmarca ferrari
+								.col-md-4
+									div
+										img(src="https://i.blogs.es/96633b/140013_cor/450_1000.jpg",width=30)
+										h4.txtmarca ferrari
+								.col-md-4
+									div
+										img(src="https://i.blogs.es/96633b/140013_cor/450_1000.jpg",width=30)
+										h4.txtmarca ferrari
+								.col-md-4
+									div
+										img(src="https://i.blogs.es/96633b/140013_cor/450_1000.jpg",width=30)
+										h4.txtmarca ferrari
+								.col-md-4
+									div
+										img(src="https://i.blogs.es/96633b/140013_cor/450_1000.jpg",width=30)
+										h4.txtmarca ferrari
+								.col-md-4
+									div
+										img(src="https://i.blogs.es/96633b/140013_cor/450_1000.jpg",width=30)
+										h4.txtmarca ferrari
+								.col-md-4
+									div
+										img(src="https://i.blogs.es/96633b/140013_cor/450_1000.jpg",width=30)
+										h4.txtmarca ferrari
+								.col-md-4
+									div
+										img(src="https://i.blogs.es/96633b/140013_cor/450_1000.jpg",width=30)
+										h4.txtmarca ferrari
+								
+
+						.col-md-3
+							h4 Modelo
+							.mod-modelo.borde
+								ul
+									li
+										a(href="#") YB100
+									li
+										a(href="#") YB100
+									li
+										a(href="#") YB100
+									li
+										a(href="#") YB100
+									li
+										a(href="#") YB100
+									li
+										a(href="#") YB100
+									li
+										a(href="#") YB100
+									li
+										a(href="#") YB100
+									li
+										a(href="#") YB100
+									li
+										a(href="#") YB100
+									li
+										a(href="#") YB100
+									li
+										a(href="#") YB100
+									li
+										a(href="#") YB100
+									li
+										a(href="#") YB100
+									li
+										a(href="#") YB100
+			.row
+				.col-md-offset-1.col-md-10
+					hr
+					.panel.panel-default
+						.panel-body
+							.col-xs-1
+								input(type="checkbox",id="checkbox-Version1" class="regular-checkbox big-checkbox")
+								label(for="checkbox-Version1")
+							.col-xs-11
+								h4 Version 0.0.1 
+					.panel.panel-default
+						.panel-body
+							.col-xs-1
+								input(type="checkbox",id="checkbox-Version2" class="regular-checkbox big-checkbox")
+								label(for="checkbox-Version2")
+							.col-xs-11
+								h4 Version 0.0.2 
+					.panel.panel-default
+						.panel-body
+							.col-xs-1
+								input(type="checkbox",id="checkbox-Version3" class="regular-checkbox big-checkbox")
+								label(for="checkbox-Version3")
+							.col-xs-11
+								h4 Version 0.0.2 
+					.panel.panel-default
+						.panel-body
+							.col-xs-1
+								input(type="checkbox",id="checkbox-Version4" class="regular-checkbox big-checkbox")
+								label(for="checkbox-Version4")
+							.col-xs-11
+								h4 Version 0.0.4 
+			.row
+				.col-md-offset-1.col-md-10
+					hr
+					.col-md-12.text-left
+						h2.subt ¿Preg1?
+					.col-md-3.text-center
+						.radio
+							input.pregDom(type='radio',id="radio-adomC11",name='pregunta11',value='No', class="regular-radio",checked='true')
+							label(for='radio-adomC11')
+							label 
+								h4 No
+					.col-md-3.text-center
+						.radio
+							input.pregDom(type='radio',id="radio-adomC12",name='pregunta11',value='Si', class="regular-radio",)
+							label(for='radio-adomC12')
+							label 
+								h4 Si
+					.col-md-12.text-left
+						h2.subt Preg2
+					.col-md-3.text-center
+						.radio
+							input.pregDom(type='radio',id="radio-bdomC13",name='pregunta12',value='Garage', class="regular-radio",checked='true')
+							label(for='radio-bdomC13')
+							label 
+								h4 Garage
+					.col-md-3.text-center
+						.radio
+							input.pregDom(type='radio',id="radio-bdomC14",name='pregunta12',value='Pension', class="regular-radio",)
+							label(for='radio-bdomC14')
+							label 
+								h4 Pensión
+					.col-md-12.text-left
+						h2.subt ¿Preg3?
+					.col-md-3.text-center
+						.radio
+							input.pregDom(type='radio',id="radio-adomC11",name='pregunta11',value='No', class="regular-radio",checked='true')
+							label(for='radio-adomC11')
+							label 
+								h4 No
+					.col-md-3.text-center
+						.radio
+							input.pregDom(type='radio',id="radio-adomC12",name='pregunta11',value='Si', class="regular-radio",)
+							label(for='radio-adomC12')
+							label 
+								h4 Si
+					.col-md-12.text-left
+						h2.subt ¿Preg4?
+					.col-md-3.text-center
+						.radio
+							input.pregDom(type='radio',id="radio-adomC11",name='pregunta11',value='No', class="regular-radio",checked='true')
+							label(for='radio-adomC11')
+							label 
+								h4 No
+					.col-md-3.text-center
+						.radio
+							input.pregDom(type='radio',id="radio-adomC12",name='pregunta11',value='Si', class="regular-radio",)
+							label(for='radio-adomC12')
+							label 
+								h4 Si						
+			.row
+				.col-md-offset-1.col-md-10
+					hr
+					.col-md-12.text-left
+						h2.subt ¿Preg5?				
+					.col-md-3.text-center
+						.ico.house
+						.radio
+							input.pregDom(type='radio',id="radio-generoA",name='genero',value='Hombre', class="regular-radio",checked='true')
+							label(for='radio-generoA')
+							label 
+								h4 M
+					.col-md-3.text-center
+						.ico.depa
+						.radio
+							input.pregDom(type='radio',id="radio-generoB",name='genero',value='Mujer', class="regular-radio")
+							label(for='radio-generoB')
+							label 
+								h4 F
+					.col-md-4
+						p.label Fecha de nacimiento*
+						.col-xs-12
+							input.selector.form-control(type='text')
+						.col-xs-4
+							input#day.form-control(type='text', disabled='')
+						.col-xs-4
+							input#moth.form-control(type='text', disabled='')
+						.col-xs-4
+							input#year.form-control(type='text', disabled='')
+					.col-md-2
+						label Codigo postal
+						input#cP.form-control(type="text",nombre="cP")
+			.row
+				.col-md-offset-1.col-md-10.text-center
+					hr
+					.col-md-offset-8.col-md-4
+						br
+						button.btn.btn-info.bigbutton(type='button') Cotizar
+
+		hr
+		.container.bgwhite
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-10
+						h4 Planes recomendados: 234234234
+					.col-md-2.text-right
+						h4
+							span.ayuda.azul(data-toggle='tooltip', data-placement='left', title='Mensaje ~(°u°)~',class="naranja-tooltip")
+			.row
+				.col-md-offset-1.col-md-10
+					hr
+					.col-md-12
+						.panel.panel-default
+							.panel-body
+								h4 Plan Amplio
+									span.ayuda.azul
+								p.labelgral2 "El paquete completo de procección"
+								p.labelgral Pago:
+									span.dato
+										strong Mensual
+								br
+								p.labelgral Primer pago:
+									span.dato
+										strong $1221,221 
+										u "incluye el derecho de poliza ($232,00)"
+								br
+								p.labelgral Pagos subsecuentes
+									span.dato 
+										strong 11 pagos de
+								br
+								p.labelgral Total a pagar: 
+								span.dato 
+									strong $2312.00
+					.col-md-4
+						.panel.panel-default
+							.panel-body
+								h4 Trimestral
+								p.dato 
+									strong $239.00
+					.col-md-4
+						.panel.panel-default
+							.panel-body
+								h4 Semestral
+								p.dato 
+									strong $9080.00
+					.col-md-4
+						.panel.panel-default
+							.panel-body
+								h4 Anual
+								p.dato 
+									strong $8979.00
+					.col-md-12.text-center
+						button.btn.btn-info.solid Ver coberturas
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-6
+						hr
+						h4 Plan A
+							span.ayuda.azul
+						p.labelgral2 "El plan más completo y con menos deducible"
+						p.labelgral Pago: 
+						span.dato 
+							strong $234,283.00
+							u *incluye el derecho a polizas *incluye el derecho a polizas *incluye el derecho a polizas
+						br
+						p.labelgral Pagos subsecuentes
+						span.dato 
+							strong 11 pagos de 123,342.00 MXN
+						br
+						p.labelgral Total a pagar:
+						Span.dato 
+							strong $232,234.00 MXN
+						hr
+						.col-xs-4 
+							p.labelgral Trimestral
+							h3 
+								strong $234.00
+						.col-xs-4
+							p.labelgral Semestral
+							h3 
+								strong $234.00
+						.col-xs-4
+							p.labelgral Anual
+							h3 
+								strong $234.00
+						.col-md-12.text-center
+							button.btn.btn-info.borde Ver Coberturas
+					.col-md-6
+						hr
+						h4 Plan B
+							span.ayuda.azul
+						p.labelgral2 "El plan más completo y con menos deducible"
+						p.labelgral Pago: 
+						span.dato 
+							strong $234,283.00
+							u *incluye el derecho a polizas *incluye el derecho a polizas *incluye el derecho a polizas
+						br
+						p.labelgral Pagos subsecuentes
+						span.dato 
+							strong 11 pagos de 123,342.00 MXN
+						br
+						p.labelgral Total a pagar:
+						Span.dato 
+							strong $232,234.00 MXN
+						hr
+						.col-xs-4 
+							p.labelgral Trimestral
+							h3 
+								strong $234.00
+						.col-xs-4
+							p.labelgral Semestral
+							h3 
+								strong $234.00
+						.col-xs-4
+							p.labelgral Anual
+							h3 
+								strong $234.00
+						.col-md-12.text-center
+							button.btn.btn-info.borde Ver Coberturas
+		hr
+		.container.bgwhite
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-12
+						h4 Resumen
+						hr
+					.col-md-3
+						.panel.panel-default
+							.panel-body
+								.ico.house
+								p.label Folio: 
+									span  67878786
+					.col-md-9
+						.panel.panel-default
+							.panel-body
+								p.label Marca: 
+									span.dato Ferrari -
+								p.label Submarca:
+									span.dato Submarcad e ferrari -
+								p.label Modelo:
+									span.dato yb125
+								br
+								p.label Versión:
+									span.dato version de modelo
+								p.dato Cuota inicial:
+									span.dato $2,133.00
+										span (incluye pago inicial de $323.00 MXN por derecho de póliza )
+								p.dato Cuota Mensual: 
+									span  1,635.00
+								p.dato Total: 
+									span  10,635.00
+		.container.bgwhite
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-12
+						h4 Titular asegurado
+						hr
+					.col-md-4
+						label Nombre(s)
+						input.form-control(type="text")
+					.col-md-4
+						label Primer apellido
+						input.form-control(type="text")
+					.col-md-4
+						label Segundo apellido
+						input.form-control(type="text")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						label Fecha de nacimiento
+						input.form-control(type="text")
+					.col-md-4
+						label CURP
+						input.form-control(type="text")
+
+					.col-md-4
+						label R.F.C.
+						input.form-control(type="text")
+
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						label E-mail
+						input.form-control(type="text")
+					.col-md-4
+						label Télefono
+						input.form-control(type="text")
+
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						label País de nacionalidad
+						input.form-control(type="text")
+					.col-md-4
+						label Estado
+						input.form-control(type="text")
+					.col-md-4
+						label Ciudad
+						input.form-control(type="text")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						label Delegación
+						input.form-control(type="text")
+					.col-md-4
+						label Colonia
+						input.form-control(type="text")
+					.col-md-4
+						label Calle
+						input.form-control(type="text")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						label No. Ext
+						input.form-control(type="text")
+					.col-md-4
+						label No. Int
+						input.form-control(type="text")
+			.row
+				.col-md-offset-1.col-md-10.text-center
+					button.btn.btn-info.solid Guardar cotizacion
+			.row
+				.col-md-offset-1.col-md-10
+					h4 Datos del pago
+					hr
+					.col-md-12
+						label Nombre del tarjetahabiente
+						input.form-control(type="text",placeholder="Nombre del tarjetahabiente")
+					.col-md-5
+						label Numero de tarjeta
+						input.form-control(type="text",placeholder="Numero de tarjeta")
+					.col-md-3
+						label Codigo de seguridad
+						input.form-control(type="text",placeholder="Codigo de seguridad")
+					.col-md-2
+						label Vigencia de tarjeta
+						input.form-control(type="text",placeholder="mes")
+					.col-md-2
+						label(style="color:#fff;") ok  
+						input.form-control(type="text",placeholder="año")
+					.col-md-12
+						input(type="checkbox",id="checkbox-Acepto" class="regular-checkbox big-checkbox")
+						label(for="checkbox-Acepto")
+						span.acepto Acepto 
+							a(href="#")  terminos y condiciones
+					.col-md-12
+						br
+						.space
+					.col-md-6.text-center
+						button.btn.btn-info.solid regresar
+					.col-md-6.text-center
+						button.btn.btn-info.solid confirmar
+					.col-md-12
+						.space
+		.container.bgwhite
+			.row
+				.col-md-offset-1.col-md-10
+					h4 Domicilio titular asegurado
+					hr
+					.col-md-4
+						label Calle
+						input.form-control(type="text")
+					.col-md-4
+						label Número exterior
+						input.form-control(type="text")
+					.col-md-4
+						label Número Interior
+						input.form-control(type="text")
+					.col-md-4
+						label Codigo postal
+						input.form-control(type="text")
+					.col-md-4
+						label Colonia
+						input.form-control(type="text")
+					hr
+			.row
+				.col-md-offset-1.col-md-10
+					h4 Contratante el mismo titular
+						.radio
+							input.pregDom(type='radio',id="radio-mismotitular1",name='mismotitular',value='Casa', class="regular-radio",checked='true')
+							label(for='radio-mismotitular1')
+							label 
+								h4 SI
+						.radio
+							input.pregDom(type='radio',id="radio-radio-mismotitular2",name='mismotitular',value='Casa', class="regular-radio",)
+							label(for='radio-radio-mismotitular2')
+							label 
+								h4 NO				
+
+	script(src="http://code.jquery.com/jquery.js")
+	script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+	script(src="../js/app.js")
+	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
