@@ -6,16 +6,12 @@ html(lang="en")
 		meta(name="viewport",content="width=device-width, initial-scale=1")
 		meta(name="description",content="")
 		meta(name="author",content="")
-		title Cotizador de...
+		title Cotizador TKm Vida
 		link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
 		link(rel='stylesheet', href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
 		link(rel="stylesheet",href="style.css")
 		link(rel="stylesheet",href="../fonts/font.css")
 	body
-		.callme
-			br
-			p.text-center Tengo dudas, Llámenme
-		hr
 		h1 pasos
 		.steps
 			.container
@@ -31,18 +27,10 @@ html(lang="en")
 						h3.text-center Formalizar
 		hr
 		
-
+	h1 Cotiza
 		.container.bgwhite
 			.row
 				form
-					.col-md-offset-1.col-md-10.form-group.text-left
-						h4 Buscar folio
-						hr
-						.col-md-4
-							.input-group
-								.input-group-addon
-									span.glyphicon.glyphicon-list-alt(aria-hidden='true')
-								input#exampleInputAmount.form-control(type='text', placeholder='Folio')
 					.col-md-offset-1.col-md-10
 						h4 Datos Basicos cotización
 						hr
@@ -58,9 +46,6 @@ html(lang="en")
 						.col-md-4
 							label Teléfono
 							input#teletkm.form-control(type="text",nombre="teletkm", placeholder='Teléfono')
-						.col-md-4
-							label E-mail
-							input#mailtkm.form-control(type="text",nombre="mailtkm", placeholder='E-mail')
 					.col-md-offset-1.col-md-10
 						hr
 						.col-md-8
@@ -73,6 +58,7 @@ html(lang="en")
 											option(value="opcion-5",nombre="") e
 					.col-md-offset-1.col-md-10.text-left
 						hr
+						h2 Tipo de plan.
 						.col-md-4
 							.ico.house
 							.radio
@@ -90,156 +76,64 @@ html(lang="en")
 			.row
 				.col-md-offset-1.col-md-10
 					hr
-					.mod-car
-						.col-md-2
-							h4 Año
-							.mod-anio.borde
-								ul
-									li
-										a(href="#") 1989
-									li
-										a(href="#") 1989
-									li
-										a(href="#") 1989
-									li
-										a(href="#") 1989
-									li
-										a(href="#") 1989
-									li
-										a(href="#") 1989
-									li
-										a(href="#") 1989
-									li
-										a(href="#") 1989
-									li
-										a(href="#") 1989
-									li
-										a(href="#") 1989
-									li
-										a(href="#") 1989
-									li
-										a(href="#") 1989
-									li
-										a(href="#") 1989
-									li
-										a(href="#") 1989
-									li
-										a(href="#") 1989
-						.col-md-7
-							h4 Marca
-							.mod-marca.borde
-								.col-md-4
-									div
-										img(src="https://i.blogs.es/96633b/140013_cor/450_1000.jpg",width=30)
-										h4.txtmarca ferrari
-								.col-md-4
-									div
-										img(src="https://i.blogs.es/96633b/140013_cor/450_1000.jpg",width=30)
-										h4.txtmarca ferrari
-								.col-md-4
-									div
-										img(src="https://i.blogs.es/96633b/140013_cor/450_1000.jpg",width=30)
-										h4.txtmarca ferrari
-								.col-md-4
-									div
-										img(src="https://i.blogs.es/96633b/140013_cor/450_1000.jpg",width=30)
-										h4.txtmarca ferrari
-								.col-md-4
-									div
-										img(src="https://i.blogs.es/96633b/140013_cor/450_1000.jpg",width=30)
-										h4.txtmarca ferrari
-								.col-md-4
-									div
-										img(src="https://i.blogs.es/96633b/140013_cor/450_1000.jpg",width=30)
-										h4.txtmarca ferrari
-								.col-md-4
-									div
-										img(src="https://i.blogs.es/96633b/140013_cor/450_1000.jpg",width=30)
-										h4.txtmarca ferrari
-								.col-md-4
-									div
-										img(src="https://i.blogs.es/96633b/140013_cor/450_1000.jpg",width=30)
-										h4.txtmarca ferrari
-								.col-md-4
-									div
-										img(src="https://i.blogs.es/96633b/140013_cor/450_1000.jpg",width=30)
-										h4.txtmarca ferrari
-								.col-md-4
-									div
-										img(src="https://i.blogs.es/96633b/140013_cor/450_1000.jpg",width=30)
-										h4.txtmarca ferrari
-								
-
-						.col-md-3
-							h4 Modelo
-							.mod-modelo.borde
-								ul
-									li
-										a(href="#") YB100
-									li
-										a(href="#") YB100
-									li
-										a(href="#") YB100
-									li
-										a(href="#") YB100
-									li
-										a(href="#") YB100
-									li
-										a(href="#") YB100
-									li
-										a(href="#") YB100
-									li
-										a(href="#") YB100
-									li
-										a(href="#") YB100
-									li
-										a(href="#") YB100
-									li
-										a(href="#") YB100
-									li
-										a(href="#") YB100
-									li
-										a(href="#") YB100
-									li
-										a(href="#") YB100
-									li
-										a(href="#") YB100
-			.row
-				.col-md-offset-1.col-md-10
-					hr
 					.panel.panel-default
 						.panel-body
 							.col-xs-1
 								input(type="checkbox",id="checkbox-Version1" class="regular-checkbox big-checkbox")
 								label(for="checkbox-Version1")
-							.col-xs-11
-								h4 Version 0.0.1 
+							.col-xs-2
+								h4 Pago Mensual
+							.col-xs-4
+								h4 + 11 pagos subsecuentes de $250
+							.col-xs-3
+								h4 Total a a pagar 
+							.col-xs-1
+								h4 $3,000.00
 					.panel.panel-default
 						.panel-body
 							.col-xs-1
 								input(type="checkbox",id="checkbox-Version2" class="regular-checkbox big-checkbox")
 								label(for="checkbox-Version2")
-							.col-xs-11
-								h4 Version 0.0.2 
+							.col-xs-2
+								h4 Pago Trimestral
+							.col-xs-4
+								h4 + 3 pagos subsecuentes de $750
+							.col-xs-3
+								h4 Total a a pagar 
+							.col-xs-1
+								h4 $3,000.00
 					.panel.panel-default
 						.panel-body
 							.col-xs-1
 								input(type="checkbox",id="checkbox-Version3" class="regular-checkbox big-checkbox")
 								label(for="checkbox-Version3")
-							.col-xs-11
-								h4 Version 0.0.2 
+							.col-xs-2
+								h4 Pago Semestral
+							.col-xs-4
+								h4 + 1 pago subsecuente de $1,500
+							.col-xs-3
+								h4 Total a a pagar 
+							.col-xs-1
+								h4 $3,000.00
 					.panel.panel-default
 						.panel-body
 							.col-xs-1
 								input(type="checkbox",id="checkbox-Version4" class="regular-checkbox big-checkbox")
 								label(for="checkbox-Version4")
-							.col-xs-11
-								h4 Version 0.0.4 
+							.col-xs-2
+								h4 Pago Anual
+							.col-xs-4
+								h4 Pago único de $3,000.00
+							.col-xs-3
+								h4 Total a a pagar 
+							.col-xs-1
+								h4 $3,000.00
 			.row
 				.col-md-offset-1.col-md-10
 					hr
+					h2 ¿Tienes o has tenido alguna de estas enfermedades?
 					.col-md-12.text-left
-						h2.subt ¿Preg1?
+						h6.labelgral2 1.- Cáncer, tumores malignos, leucemia o lupus
 					.col-md-3.text-center
 						.radio
 							input.pregDom(type='radio',id="radio-adomC11",name='pregunta11',value='No', class="regular-radio",checked='true')
@@ -253,21 +147,22 @@ html(lang="en")
 							label 
 								h4 Si
 					.col-md-12.text-left
-						h2.subt Preg2
+						h6.labelgral2 2.- Aunerisma, trombosis, embolia, derrame cerebral o cardiopatía 
+							strong (infarto o isquemia o arritmia)
 					.col-md-3.text-center
 						.radio
-							input.pregDom(type='radio',id="radio-bdomC13",name='pregunta12',value='Garage', class="regular-radio",checked='true')
+							input.pregDom(type='radio',id="radio-bdomC13",name='pregunta12',value='NO', class="regular-radio",checked='true')
 							label(for='radio-bdomC13')
 							label 
-								h4 Garage
+								h4 NO
 					.col-md-3.text-center
 						.radio
-							input.pregDom(type='radio',id="radio-bdomC14",name='pregunta12',value='Pension', class="regular-radio",)
+							input.pregDom(type='radio',id="radio-bdomC14",name='pregunta12',value='Si', class="regular-radio",)
 							label(for='radio-bdomC14')
 							label 
-								h4 Pensión
+								h4 Si
 					.col-md-12.text-left
-						h2.subt ¿Preg3?
+						h6.labelgral2 3.- Efisema pulmonar, bronquitis crónica o tuberculosis.
 					.col-md-3.text-center
 						.radio
 							input.pregDom(type='radio',id="radio-adomC15",name='pregunta13',value='No', class="regular-radio",checked='true')
@@ -281,7 +176,7 @@ html(lang="en")
 							label 
 								h4 Si
 					.col-md-12.text-left
-						h2.subt ¿Preg4?
+						h6.labelgral2 4.- Insuficiencia hepática, cirrosis hepática, hepatitis crónica ("B" o "C"), insuficiencia renal crónica o pancreatitis.
 					.col-md-3.text-center
 						.radio
 							input.pregDom(type='radio',id="radio-adomC17",name='pregunta14',value='No', class="regular-radio",checked='true')
@@ -298,7 +193,7 @@ html(lang="en")
 				.col-md-offset-1.col-md-10
 					hr
 					.col-md-12.text-left
-						h2.subt ¿Preg5?				
+						h6.labelgral2 Genero
 					.col-md-3.text-center
 						.ico.house
 						.radio
@@ -332,127 +227,7 @@ html(lang="en")
 					.col-md-offset-8.col-md-4
 						br
 						button.btn.btn-info.bigbutton(type='button') Cotizar
-
-		hr
-		.container.bgwhite
-			.row
-				.col-md-offset-1.col-md-10
-					.col-md-10
-						h4 Planes recomendados: 234234234
-					.col-md-2.text-right
-						h4
-							span.ayuda.azul(data-toggle='tooltip', data-placement='left', title='Mensaje ~(°u°)~',class="naranja-tooltip")
-			.row
-				.col-md-offset-1.col-md-10
-					hr
-					.col-md-12
-						.panel.panel-default
-							.panel-body
-								h4 Plan Amplio
-									span.ayuda.azul
-								p.labelgral2 "El paquete completo de procección"
-								p.labelgral Pago:
-									span.dato
-										strong Mensual
-								br
-								p.labelgral Primer pago:
-									span.dato
-										strong $1221,221 
-										u "incluye el derecho de poliza ($232,00)"
-								br
-								p.labelgral Pagos subsecuentes
-									span.dato 
-										strong 11 pagos de
-								br
-								p.labelgral Total a pagar: 
-								span.dato 
-									strong $2312.00
-					.col-md-4
-						.panel.panel-default
-							.panel-body
-								h4 Trimestral
-								p.dato 
-									strong $239.00
-					.col-md-4
-						.panel.panel-default
-							.panel-body
-								h4 Semestral
-								p.dato 
-									strong $9080.00
-					.col-md-4
-						.panel.panel-default
-							.panel-body
-								h4 Anual
-								p.dato 
-									strong $8979.00
-					.col-md-12.text-center
-						button.btn.btn-info.solid Ver coberturas
-			.row
-				.col-md-offset-1.col-md-10
-					.col-md-6
-						hr
-						h4 Plan A
-							span.ayuda.azul
-						p.labelgral2 "El plan más completo y con menos deducible"
-						p.labelgral Pago: 
-						span.dato 
-							strong $234,283.00
-							u *incluye el derecho a polizas *incluye el derecho a polizas *incluye el derecho a polizas
-						br
-						p.labelgral Pagos subsecuentes
-						span.dato 
-							strong 11 pagos de 123,342.00 MXN
-						br
-						p.labelgral Total a pagar:
-						Span.dato 
-							strong $232,234.00 MXN
-						hr
-						.col-xs-4 
-							p.labelgral Trimestral
-							h3 
-								strong $234.00
-						.col-xs-4
-							p.labelgral Semestral
-							h3 
-								strong $234.00
-						.col-xs-4
-							p.labelgral Anual
-							h3 
-								strong $234.00
-						.col-md-12.text-center
-							button.btn.btn-info.borde Ver Coberturas
-					.col-md-6
-						hr
-						h4 Plan B
-							span.ayuda.azul
-						p.labelgral2 "El plan más completo y con menos deducible"
-						p.labelgral Pago: 
-						span.dato 
-							strong $234,283.00
-							u *incluye el derecho a polizas *incluye el derecho a polizas *incluye el derecho a polizas
-						br
-						p.labelgral Pagos subsecuentes
-						span.dato 
-							strong 11 pagos de 123,342.00 MXN
-						br
-						p.labelgral Total a pagar:
-						Span.dato 
-							strong $232,234.00 MXN
-						hr
-						.col-xs-4 
-							p.labelgral Trimestral
-							h3 
-								strong $234.00
-						.col-xs-4
-							p.labelgral Semestral
-							h3 
-								strong $234.00
-						.col-xs-4
-							p.labelgral Anual
-							h3 
-								strong $234.00
-						.col-md-12.text-center
-							button.btn.btn-info.borde Ver Coberturas
+	h1 configura
 		hr
 		.container.bgwhite
 			.row
@@ -469,22 +244,55 @@ html(lang="en")
 					.col-md-9
 						.panel.panel-default
 							.panel-body
-								p.label Marca: 
-									span.dato Ferrari -
-								p.label Submarca:
-									span.dato Submarcad e ferrari -
-								p.label Modelo:
-									span.dato yb125
-								br
-								p.label Versión:
-									span.dato version de modelo
-								p.dato Cuota inicial:
-									span.dato $2,133.00
-										span (incluye pago inicial de $323.00 MXN por derecho de póliza )
-								p.dato Cuota Mensual: 
-									span  1,635.00
-								p.dato Total: 
-									span  10,635.00
+								.col-md-6
+									h4 Suma asegurada
+								.col-md-6
+									h4 $5000,000.°°
+								.col-md-4
+									h2.subt Suma asegurada por fallecimiento
+									h3 $ 250,000.°°
+								.col-md-4
+									h2.subt Suma asegurada por muerte accidental
+									h3 $ 120,000.°°
+								.col-md-4
+									h2.subt Suma asegurada para gastos funerarios
+									h3 $ 280,000.°°
+								.col-md-4
+									h2.subt Periodo:
+									h3 Mensual
+								.col-md-4
+									h2.subt Primer pago:
+									h3 $ 250.°°
+								.col-md-4
+									h2.subt Pagos subsecuentes 11 pagos de:
+									h3 $ 250.°°
+								.col-md-6
+									h4 Total a pagar
+								.col-md-6
+									h4 $3,000.°°
+					.col-md-10
+						h4 ¿Cuentas con algún cupon?
+						.col-md-4
+							input#cupon.form-control(type="text", placeholder="ingrese codigo",nombre="cupon")
+						.col-md-3
+							button.btn.btn-info.bigbutton(type='button') Validar
+					.col-md-6
+					.col-md-3
+						h4 Cuota Mensual: 
+					.col-md-3
+						h4 $ 1,098.00
+						
+				.col-md-12
+						br
+						.space
+					.col-md-6.text-center
+						button.btn.btn-info.solid regresar
+					.col-md-6.text-center
+						button.btn.btn-info.solid confirmar
+					.col-md-12
+						.space
+	h1 Formaliza
+		hr
 		.container.bgwhite
 			.row
 				.col-md-offset-1.col-md-10
@@ -493,68 +301,92 @@ html(lang="en")
 						hr
 					.col-md-4
 						label Nombre(s)
-						input.form-control(type="text")
+						input#nombretkmQ.form-control(type="text",nombre="nombretkmQ")
 					.col-md-4
-						label Primer apellido
-						input.form-control(type="text")
+						label Apellido Paterno
+						input#apellidoPtkmQ.form-control(type="text",nombre="apellidoPtkmQ")
 					.col-md-4
-						label Segundo apellido
-						input.form-control(type="text")
+						label Apellido Materno
+						input#ApellidoMtkmQ.form-control(type="text",nombre="ApellidoMtkmQ")
 			.row
 				.col-md-offset-1.col-md-10
 					.col-md-4
 						label Fecha de nacimiento
-						input.form-control(type="text")
+						input#fnacimientotkmQ.form-control(type="text",nombre="fnacimientotkmQ")
 					.col-md-4
 						label CURP
-						input.form-control(type="text")
+						input#curptkmQ.form-control(type="text",nombre="curptkmQ")
 
 					.col-md-4
 						label R.F.C.
-						input.form-control(type="text")
+						input#rfctkmQ.form-control(type="text",nombre="rfctkmQ")
 
 			.row
 				.col-md-offset-1.col-md-10
 					.col-md-4
 						label E-mail
-						input.form-control(type="text")
+						input#mailtkmQ.form-control(type="text",nombre="mailtkmQ")
 					.col-md-4
 						label Télefono
-						input.form-control(type="text")
+						input#telefonotkmQ.form-control(type="text",nombre="telefonotkmQ")
 
 			.row
 				.col-md-offset-1.col-md-10
+					.col-md-12
+						h4 Domicilio titular asegurado
+						hr
 					.col-md-4
 						label País de nacionalidad
-						input.form-control(type="text")
+						input#paistkmQ.form-control(type="text",nombre="paistkmQ")
 					.col-md-4
 						label Estado
-						input.form-control(type="text")
+						input#edotkmQ.form-control(type="text",nombre="edotkmQ")
 					.col-md-4
 						label Ciudad
-						input.form-control(type="text")
+						input#ciudadtkmQ.form-control(type="text",nombre="ciudadtkmQ")
 			.row
 				.col-md-offset-1.col-md-10
 					.col-md-4
 						label Delegación
-						input.form-control(type="text")
+						input#delegaciontkmQ.form-control(type="text",nombre="delegaciontkmQ")
 					.col-md-4
 						label Colonia
-						input.form-control(type="text")
+						input#coloniatkmQ.form-control(type="text",nombre="coloniatkmQ")
 					.col-md-4
 						label Calle
-						input.form-control(type="text")
+						input#calletkmQ.form-control(type="text",nombre="calletkmQ")
 			.row
 				.col-md-offset-1.col-md-10
 					.col-md-4
 						label No. Ext
-						input.form-control(type="text")
+						input#noextkmQ.form-control(type="text",nombre="noextkmQ")
 					.col-md-4
 						label No. Int
-						input.form-control(type="text")
+						input#noInttkmQ.form-control(type="text",nombre="noInttkmQ")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-12
+						h4 Contratante
+						hr
+					.col-md-12
+						h2 Contratante es el mismo que el titular
+					.col-md-3
+						.radio
+							input.pregDom(type='radio',id="radio-mismotitular1",name='mismotitular',value='Casa', class="regular-radio",checked='true')
+							label(for='radio-mismotitular1')
+							label 
+								h4 SI
+					.col-md-3
+						.radio
+							input.pregDom(type='radio',id="radio-radio-mismotitular2",name='mismotitular',value='Casa', class="regular-radio",)
+							label(for='radio-radio-mismotitular2')
+							label 
+								h4 NO		
 			.row
 				.col-md-offset-1.col-md-10.text-center
-					button.btn.btn-info.solid Guardar cotizacion
+					.col-md-9
+					.col-md-3
+						button.btn.btn-info.solid Guardar cotizacion
 			.row
 				.col-md-offset-1.col-md-10
 					h4 Datos del pago
@@ -579,49 +411,6 @@ html(lang="en")
 						label(for="checkbox-Acepto")
 						span.acepto Acepto 
 							a(href="#")  terminos y condiciones
-					.col-md-12
-						br
-						.space
-					.col-md-6.text-center
-						button.btn.btn-info.solid regresar
-					.col-md-6.text-center
-						button.btn.btn-info.solid confirmar
-					.col-md-12
-						.space
-		.container.bgwhite
-			.row
-				.col-md-offset-1.col-md-10
-					h4 Domicilio titular asegurado
-					hr
-					.col-md-4
-						label Calle
-						input.form-control(type="text")
-					.col-md-4
-						label Número exterior
-						input.form-control(type="text")
-					.col-md-4
-						label Número Interior
-						input.form-control(type="text")
-					.col-md-4
-						label Codigo postal
-						input.form-control(type="text")
-					.col-md-4
-						label Colonia
-						input.form-control(type="text")
-					hr
-			.row
-				.col-md-offset-1.col-md-10
-					h4 Contratante el mismo titular
-						.radio
-							input.pregDom(type='radio',id="radio-mismotitular1",name='mismotitular',value='Casa', class="regular-radio",checked='true')
-							label(for='radio-mismotitular1')
-							label 
-								h4 SI
-						.radio
-							input.pregDom(type='radio',id="radio-radio-mismotitular2",name='mismotitular',value='Casa', class="regular-radio",)
-							label(for='radio-radio-mismotitular2')
-							label 
-								h4 NO				
 
 	script(src="http://code.jquery.com/jquery.js")
 	script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
