@@ -48,15 +48,44 @@ html(lang="en")
 							label Teléfono
 							input#teletkm.form-control(type="text",nombre="teletkm", placeholder='Teléfono')
 					.col-md-offset-1.col-md-10
+						h4 Domicilio a asegurar
+						hr
+						.col-md-4
+							label Calle
+							input#Calletkm.form-control(type="text",nombre="Calletkm", placeholder='Calle')
+						.col-md-4
+							label No. Exterior
+							input#NoExteriortkm.form-control(type="text",nombre="No.Exteriortkm", placeholder='No. Exterior')
+						.col-md-4
+							label No. Int
+							input#NoInttkm.form-control(type="text",nombre="NoInttkm", placeholder='No. Int')
+						.col-md-4
+							label Codigo postal
+							input#cptkm.form-control(type="text",nombre="C.ptkm", placeholder='Codigo postal')
+						.col-md-4
+							label Colonia
+							select#uso.form-control
+								option(value="opcion-1",nombre="") Colonia
+								option(value="opcion-2",nombre="") b
+								option(value="opcion-3",nombre="") c
+								option(value="opcion-4",nombre="") d
+								option(value="opcion-5",nombre="") e
+						.col-md-4
+							label Delegación/Municipio
+							input#delegacionkm.form-control(type="text",nombre="delegtkm", placeholder='Delegación/Municipio')
+						.col-md-4
+							label Estado
+							input#edotkm.form-control(type="text",nombre="edotkm", placeholder='Estado')
+					.col-md-offset-1.col-md-10
 						hr
 						.col-md-8
 							h4 Suma asegurar:
 							select#uso.form-control
-											option(value="opcion-1",nombre="") 1,000.00°°
-											option(value="opcion-2",nombre="") b
-											option(value="opcion-3",nombre="") c
-											option(value="opcion-4",nombre="") d
-											option(value="opcion-5",nombre="") e
+								option(value="opcion-1",nombre="") 1,000.00°°
+								option(value="opcion-2",nombre="") b
+								option(value="opcion-3",nombre="") c
+								option(value="opcion-4",nombre="") d
+								option(value="opcion-5",nombre="") e
 					.col-md-offset-1.col-md-10.text-left
 						hr
 						h2 Tipo de plan.
@@ -524,6 +553,11 @@ html(lang="en")
 						label(for="checkbox-Acepto")
 						span.acepto Acepto 
 							a(href="#")  terminos y condiciones
+			.row
+				.col-md-offset-1.col-md-10.text-center
+					.col-md-9
+					.col-md-3
+						button.btn.btn-info.solid Pagar
 
 	script(src="http://code.jquery.com/jquery.js")
 	script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
