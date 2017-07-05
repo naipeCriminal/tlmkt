@@ -153,7 +153,6 @@ h2.subt{
     width: 200px;
     position: relative;
     top: 5px;
-    font-weight: bold;
     text-transform: uppercase;
     display: block;
     float: left;
@@ -173,7 +172,6 @@ ul.list-group{
 		& .badge{
 			color: $gris3;
 			background-color:transparent;
-			font-weight:400;
 	    	font-size: 15px;
 		}
 		& .tp{
@@ -195,7 +193,6 @@ ul.list-group{
 	}
 	& p.label{
 		color: #fff;
-		font-weight: 100;
 		font-size: 23px;
 	}
 }
@@ -311,18 +308,14 @@ ul.list-group{
 	&.envioPoliza{
 		h4{
 		    font-size: 22px;
-	    	font-weight: 600;
 		}
 		h2{
 			font-size: 20px;
 		}
 		label{
-			font-weight: 200;
     		color: #777;
 		}
-		p{
-			font-weight: 600;
-		}
+		
 	}
 }
 
@@ -501,22 +494,18 @@ ul.list-group{
 	}
 	h5{
 	    font-size: 22px;
-    	font-weight: 600;
 	}
 	h4{
 	    font-size: 19px;
-    	font-weight: 600;
 	}
 	h2{
 		font-family:$h2SubFamily;
-	font-weight:$h2SubW;
 	color:$h2SubColor;
 	line-height: 20px;
 		font-size: 20px;
 	}
 	h3{
 	font-family:$h2SubFamily;
-	font-weight:$h2SubW;
 	color:$gris7;
 	line-height: 20px;
 	font-size: 16px;
@@ -541,7 +530,7 @@ ul.list-group{
 		font-size: 12px;
 		color: #6C6F73;
 	}
-	label{font-weight: 200;font-family: StagSans-Light;
+	label{font-family: StagSans-Light;
 font-size: 16px;
 color: $gris3;}
 }
@@ -562,7 +551,6 @@ color: $gris3;}
 	padding: 15px;
 	h2{
 		color:$azul2;
-		font-weight: 600;
 	}
 	h3{
 		color:$azul2;
@@ -570,7 +558,6 @@ color: $gris3;}
 	h4{
 		color:$azul3;
 	    text-decoration: underline;
-	    font-weight: 600;
 	}	
 	ul{
 		li{
@@ -600,7 +587,6 @@ color: $gris3;}
 }
 .contrata{
 	h2.subt{
-		font-weight: 700;
 		color: #fff;
 	}
 }
@@ -727,6 +713,5 @@ color: $gris3;}
 	font-family: $pLabelFamily;
 	font-size: 14px;
 	color: $gris8;
-	font-weight: $pLabelW;
 	white-space: inherit;
 }
