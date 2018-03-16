@@ -1,0 +1,1172 @@
+doctype html
+html(lang="en", ng-app="GM")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport",content="width=device-width, initial-scale=1")
+		meta(name="description",content="")
+		meta(name="author",content="")
+		title Cotizador TKm GM
+		link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
+		link(rel='stylesheet', href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
+		link(rel="stylesheet",href="style.css")
+		script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js")
+	body
+		h1 pasos
+		.steps
+			.container
+				.row
+					.col-md-offset-1.col-md-2.step.active
+						.ico.registra
+						h3.text-center Registra
+						span
+					.col-md-2.step.complete
+						.ico.cotiza
+						h3.text-center Cotiza
+						span
+					.col-md-2.step
+						.ico.valida
+						h3.text-center Valida
+						span
+					.col-md-2.step
+						.ico.contrata
+						h3.text-center Contrata
+						span
+					.col-md-2.step
+						.ico.poliza
+						h3.text-center Recibe tu Póliza
+						span
+		hr
+		
+	h1 Cotiza
+		.container.bgwhite(ng-controller="paso1")
+			.row
+				.col-md-offset-1.col-md-10
+					h4 Datos de Cotización
+					p Completa la información de las secciones que a continuación te presentamos
+					hr
+					.col-md-4
+						.div
+							p.label Fecha de nacimiento *
+						.col-xs-3.sinLeft
+							input#day.form-control(type='text', maxlength="2", placeholder="DD")
+						.col-xs-4
+							input#moth.form-control(type='text', maxlength="2", placeholder="MM")
+						.col-xs-5
+							input#year.form-control(type='text', maxlength="4", placeholder="YYYY")
+					.col-md-4
+						p.label Codigo postal *
+						input#cP.form-control(type="text",nombre="cp", maxlength="5")
+					.col-md-2.text-center
+						p.label Genero *
+						.radio
+							input.pregDom(type='radio',id="radio-generoA",name='generoT',value='Hombre', class="regular-radio",checked='true')
+							label(for='radio-generoA')
+							label 
+								h4 M
+					.col-md-2.text-center
+						p.label  
+						.radio
+							input.pregDom(type='radio',id="radio-generoB",name='generoT',value='Mujer', class="regular-radio")
+							label(for='radio-generoB')
+							label 
+								h4 F
+					
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						p.label Plan *
+						select#uso.form-control(ng-model="planSeleccionado")
+							option(ng-repeat="planes in plan", value="{{ planes }}") {{ planes }}
+						br
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						p Parentesco
+					.col-md-4
+						p Fecha de Nacimiento
+					.col-md-4
+						p Género
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						p.label Cónyuge
+					.col-md-4
+						.col-xs-3.sinLeft
+							input#day.form-control(type='text', maxlength="2", placeholder="DD")
+						.col-xs-4
+							input#moth.form-control(type='text', maxlength="2", placeholder="MM")
+						.col-xs-4
+							input#year.form-control(type='text', maxlength="4", placeholder="YYYY")
+					.col-md-2.text-center
+						.radio
+							input.pregDom(type='radio',id="radioConyugeM",name='generoC',value='Hombre', class="regular-radio",checked='true')
+							label(for='radioConyugeM')
+							label 
+								h4 M
+					.col-md-2.text-center
+						.radio
+							input.pregDom(type='radio',id="radioConyugeF",name='generoC',value='Mujer', class="regular-radio")
+							label(for='radioConyugeF')
+							label 
+								h4 F
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						p.label Hijo
+					.col-md-4
+						.col-xs-3.sinLeft
+							input#day.form-control(type='text', maxlength="2", placeholder="DD")
+						.col-xs-4
+							input#moth.form-control(type='text', maxlength="2", placeholder="MM")
+						.col-xs-4
+							input#year.form-control(type='text', maxlength="4", placeholder="YYYY")
+					.col-md-2.text-center
+						.radio
+							input.pregDom(type='radio',id="radioHijo1F",name='generoH1',value='Hombre', class="regular-radio",checked='true')
+							label(for='radioHijo1F')
+							label 
+								h4 M
+					.col-md-2.text-center
+						.radio
+							input.pregDom(type='radio',id="radioHijo1M",name='generoH1',value='Mujer', class="regular-radio")
+							label(for='radioHijo1M')
+							label 
+								h4 F
+			.space
+			.row
+				.col-md-offset-1.col-md-10.text-center
+					.col-md-6
+					.col-md-3
+						button.btn.btn-info.solid Eliminar Hijo
+					.col-md-3
+						button.btn.btn-info.solid Insertar Hijo
+
+			.space
+			.row
+				.col-md-offset-1.col-md-10
+					h4 Cuestionario Médico
+					hr
+					.row
+						.col-md-6
+							p.label Padece o ha padecido de ....
+							p.label ¿Padece o ha padecido de enfermedades del aparato digestivo como: litiasis (piedras) en la vesícula y/o vías biliares, úlceras gástricas y/o duodenales, divertículos del colon o fístulas ano rectales?
+							p.label ¿Padece o ha padecido de enfermedades cardiovasculares como: infarto al miocardio, hipertensión arterial, afecciones de las arterias coronarias o tiene colesterol elevado?
+						.col-md-1.col-xs-2
+							p Titular
+							br
+							input(type="checkbox",id="enfDigestivaT" class="regular-checkbox big-checkbox")
+							label(for="enfDigestivaT")
+							br
+							input(type="checkbox",id="enfCorazonT" class="regular-checkbox big-checkbox")
+							label(for="enfCorazonT")
+
+						.col-md-1.col-xs-3
+							p Cónyuge
+							br
+							input(type="checkbox",id="enfDigestivaC" class="regular-checkbox big-checkbox")
+							label(for="enfDigestivaC")
+
+						.col-md-1.col-xs-2
+							p Hijo 1
+							br
+							input(type="checkbox",id="enfDigestivaH1" class="regular-checkbox big-checkbox")
+							label(for="enfDigestivaH1")
+
+						.col-md-1.col-xs-2
+							p Hijo 2
+							br
+							input(type="checkbox",id="enfDigestivaH2" class="regular-checkbox big-checkbox")
+							label(for="enfDigestivaH2")
+						.col-md-1.col-xs-2
+							p Hijo 2
+							br
+							input(type="checkbox",id="enfDigestivaH3" class="regular-checkbox big-checkbox")
+							label(for="enfDigestivaH3")
+						.col-md-1.col-xs-2
+							p Hijo 3
+							br
+							input(type="checkbox",id="enfDigestivaH4" class="regular-checkbox big-checkbox")
+							label(for="enfDigestivaH4")
+					.space
+					.row
+						
+						.col-md-1.col-xs-2
+							
+						.col-md-1.col-xs-3
+							br
+							input(type="checkbox",id="enfCorazonC" class="regular-checkbox big-checkbox")
+							label(for="enfCorazonC")
+						.col-md-1.col-xs-2
+							br
+							input(type="checkbox",id="enfCorazonH1" class="regular-checkbox big-checkbox")
+							label(for="enfCorazonH1")
+						.col-md-1.col-xs-2
+							br
+							input(type="checkbox",id="enfCorazonH2" class="regular-checkbox big-checkbox")
+							label(for="enfCorazonH2")
+						.col-md-1.col-xs-2
+							br
+							input(type="checkbox",id="enfCorazonH3" class="regular-checkbox big-checkbox")
+							label(for="enfCorazonH3")
+						.col-md-1.col-xs-1
+							br
+							input(type="checkbox",id="enfCorazonH4" class="regular-checkbox big-checkbox")
+							label(for="enfCorazonH4") 
+					.space
+					.row
+						.col-md-6
+							p.label ¿Padece o ha padecido de amigdalitis y/o adenoiditas indicar si ya se operó, hernias en la cavidad abdominal, varices en miembros inferiores, litiasis (piedras) en los riñones, osteoporosis, catarata, hemorroides y afecciones de la próstata?
+						.col-md-1.col-xs-2
+							br
+							input(type="checkbox",id="operacionesT" class="regular-checkbox big-checkbox")
+							label(for="operacionesT")
+						.col-md-1.col-xs-3
+							br
+							input(type="checkbox",id="operacionesC" class="regular-checkbox big-checkbox")
+							label(for="operacionesC")
+						.col-md-1.col-xs-2
+							br
+							input(type="checkbox",id="operacionesH1" class="regular-checkbox big-checkbox")
+							label(for="operacionesH1")
+						.col-md-1.col-xs-2
+							br
+							input(type="checkbox",id="operacionesH2" class="regular-checkbox big-checkbox")
+							label(for="operacionesH2")
+						.col-md-1.col-xs-2
+							br
+							input(type="checkbox",id="operacionesH3" class="regular-checkbox big-checkbox")
+							label(for="operacionesH3")
+						.col-md-1.col-xs-1
+							br
+							input(type="checkbox",id="operacionesH4" class="regular-checkbox big-checkbox")
+							label(for="operacionesH4")
+					.space
+					.row
+						.col-md-6
+							p.label ¿Padece o ha padecido de cáncer o tumores de cualquier clase?
+						.col-md-1.col-xs-2
+							br
+							input(type="checkbox",id="cancerT" class="regular-checkbox big-checkbox")
+							label(for="cancerT")
+						.col-md-1.col-xs-3
+							br
+							input(type="checkbox",id="cancerC" class="regular-checkbox big-checkbox")
+							label(for="cancerC")
+						.col-md-1.col-xs-2
+							br
+							input(type="checkbox",id="cancerH1" class="regular-checkbox big-checkbox")
+							label(for="cancerH1")
+						.col-md-1.col-xs-2
+							br
+							input(type="checkbox",id="cancerH2" class="regular-checkbox big-checkbox")
+							label(for="cancerH2")
+						.col-md-1.col-xs-2
+							br
+							input(type="checkbox",id="cancerH3" class="regular-checkbox big-checkbox")
+							label(for="cancerH3")
+						.col-md-1.col-xs-1
+							br
+							input(type="checkbox",id="cancerH4" class="regular-checkbox big-checkbox")
+							label(for="cancerH4")
+					.space
+					.row
+						.col-md-6
+							p.label ¿Padece o ha padecido de alguna otra enfermedad o accidente no mencionada en este cuestionario?
+						.col-md-1.col-xs-2
+							br
+							input(type="checkbox",id="enfermedadXT" class="regular-checkbox big-checkbox")
+							label(for="enfermedadXT")
+						.col-md-1.col-xs-3
+							br
+							input(type="checkbox",id="enfermedadXC" class="regular-checkbox big-checkbox")
+							label(for="enfermedadXC")
+						.col-md-1.col-xs-2
+							br
+							input(type="checkbox",id="enfermedadXH1" class="regular-checkbox big-checkbox")
+							label(for="enfermedadXH1")
+						.col-md-1.col-xs-2
+							br
+							input(type="checkbox",id="enfermedadXH2" class="regular-checkbox big-checkbox")
+							label(for="enfermedadXH2")
+						.col-md-1.col-xs-2
+							br
+							input(type="checkbox",id="enfermedadXH3" class="regular-checkbox big-checkbox")
+							label(for="enfermedadXH3")
+						.col-md-1.col-xs-1
+							br
+							input(type="checkbox",id="enfermedadXH4" class="regular-checkbox big-checkbox")
+							label(for="enfermedadXH4")
+					.space
+					.row
+						.col-md-6
+							p.label En caso de ser mujer, además contestar. ¿Padece o ha padecido de enfermedades de las mamas, ovarios, o útero? Indicar si ya se le practicó histerectomía
+						.col-md-1.col-xs-2
+							br
+							input(type="checkbox",id="enfermedadFT" class="regular-checkbox big-checkbox")
+							label(for="enfermedadFT")
+						.col-md-1.col-xs-3
+							br
+							input(type="checkbox",id="enfermedadFC" class="regular-checkbox big-checkbox")
+							label(for="enfermedadFC")
+						.col-md-1.col-xs-2
+							br
+							input(type="checkbox",id="enfermedadFH1" class="regular-checkbox big-checkbox")
+							label(for="enfermedadFH1")
+						.col-md-1.col-xs-2
+							br
+							input(type="checkbox",id="enfermedadFH2" class="regular-checkbox big-checkbox")
+							label(for="enfermedadFH2")
+						.col-md-1.col-xs-2
+							br
+							input(type="checkbox",id="enfermedadFH3" class="regular-checkbox big-checkbox")
+							label(for="enfermedadFH3")
+						.col-md-1.col-xs-1
+							br
+							input(type="checkbox",id="enfermedadFH4" class="regular-checkbox big-checkbox")
+							label(for="enfermedadFH4")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-offset-8.col-md-4
+						br
+						button.btn.btn-info.bigbutton(type='button') Calcular
+			.row
+				.col-md-offset-1.col-md-10
+					hr
+					h4 Cotización
+					.col-md-6
+						p.label Prima Anual
+					.col-md-6
+						p.label $ Precio .00
+					.col-md-6
+						p.label Pagos restantes
+					.col-md-6
+						p.label $ Precio .00
+					.col-md-6
+						p.label Total a pagar
+					.col-md-6
+						p.label $ Precio .00
+				.col-md-offset-1.col-md-10
+					.space
+					.col-md-4
+						button.btn.btn-info.bigbutton(type='button') Enviar E-mail Cotización
+					.col-md-4
+						button.btn.btn-info.bigbutton(type='button') Imprimir Cotización
+					.col-md-4
+						button.btn.btn-info.bigbutton(type='button') Continuar
+
+	h1 Datos
+		hr
+		.container.bgwhite
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-12
+						h4 Datos del contratante
+						hr
+					.col-md-4
+						label Nombre(s)
+						input.form-control(type="text",nombre="nombretkmQ")
+					.col-md-4
+						label Apellido Paterno
+						input.form-control(type="text",nombre="apellidoPtkmQ")
+					.col-md-4
+						label Apellido Materno
+						input.form-control(type="text",nombre="ApellidoMtkmQ")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						.div
+							p.label Fecha de nacimiento
+						.col-xs3.sinLeft
+							input#day.form-control(type='text', maxlength="2", placeholder="DD")
+						.col-xs-4
+							input#moth.form-control(type='text', maxlength="2", placeholder="MM")
+						.col-xs-4
+							input#year.form-control(type='text', maxlength="4", placeholder="AAAA")
+					.col-md-4
+						label R.F.C.
+						input.form-control(type="text",nombre="rfctkmQ")
+					.col-md-4
+						label CURP
+						input.form-control(type="text",nombre="curptkmQ")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-2.text-center
+						p.label Genero *
+						.radio
+							input.pregDom(type='radio',id="radio-generoM",name='generoCT',value='Hombre', class="regular-radio",checked='true')
+							label(for='radio-generoM')
+							label 
+								h4 M
+					.col-md-2.text-center
+						p.label  
+						.radio
+							input.pregDom(type='radio',id="radio-generoF",name='generoCT',value='Mujer', class="regular-radio")
+							label(for='radio-generoF')
+							label 
+								h4 F
+					.col-md-4
+						p.label Estado civil *
+						select#uso.form-control
+							option(value="") Elija un estado civil
+							option(value="opcion-1",nombre="") Casado
+							option(value="opcion-2",nombre="") Divorciado
+							option(value="opcion-3",nombre="") Soltero
+							option(value="opcion-3",nombre="") Unión libre
+							option(value="opcion-3",nombre="") Viudo
+					.col-md-2
+						label Peso (Kg) *
+						input.form-control(type="text")
+					.col-md-2
+						label Estatura (cm) *
+						input.form-control(type="text")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						label País Nacionalidad *
+						select.form-control
+							option(value="") País
+							option(value="opcion-1",nombre="") 
+					.col-md-4
+						label País residencia *
+						select.form-control
+							option(value="") País
+							option(value="opcion-1",nombre="") 
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						label Correo Electrónico *
+						input.form-control(type="text")
+					.col-md-4
+						label Ocupacion Actual *
+						.input-group
+							input.form-control(type="text")
+							span.input-group-btn
+								button.btn.btn-info Buscar
+					.col-md-4
+						label Seleccione una ocupación
+						select.form-control
+							option(value="") Elija ocupación
+							option(value="opcion-1",nombre="")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						label Actividad o giro del negocio  en el que labora actualmente *
+						.input-group
+							input.form-control(type="text")
+							span.input-group-btn
+								button.btn.btn-info Buscar
+					.col-md-4
+						label Seleccione una Actividad o giro *
+						select.form-control
+							option(value="") Elija ocupación
+							option(value="opcion-1",nombre="")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-12
+						h4 Domicilio del contratante
+						hr
+					.col-md-6
+						label Calle *
+						input.form-control(type="text")
+					.col-md-3
+						label Número Exterior
+						input.form-control(type="text")
+					.col-md-3
+						label Número interior
+						input.form-control(type="text")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						label Codigo Postal *
+						.input-group
+							input.form-control(type="text")
+							span.input-group-btn
+								button.btn.btn-info Buscar
+					.col-md-4
+						label Colonia *
+						select.form-control
+							option(value="") Elija una Colonia
+							option(value="opcion-1",nombre="")
+					.col-md-4
+						label Delegación o Municipio
+						input.form-control(type="text", disabled="")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						label Ciudad
+						input.form-control(type="text", disabled="")
+					.col-md-4
+						label Estado
+						input.form-control(type="text", disabled="")
+					.col-md-4
+						label ¿Entre que calles? *
+						input.form-control(type="text")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						.div
+							label Horario de entrega
+						.col-xs-5
+							select.form-control
+								option(value="") hr
+								option(value="opcion-1",nombre="")
+						.col-xs-2
+							label a
+						.col-xs-5
+							select.form-control
+								option(value="") hr
+								option(value="opcion-1",nombre="")
+					.col-md-8
+						label Observaciones para la entrega de documentos *
+						input.form-control(rows="2")
+					
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						.div
+							label Telefono 1 *
+						.col-xs-4
+							input.form-control(type="text", maxlength="2")
+						.col-xs-8
+							input.form-control(type="text", maxlength="8")
+					.col-md-4
+						.div
+							label Telefono 2 *
+						.col-xs-4
+							input.form-control(type="text", maxlength="2")
+						.col-xs-8
+							input.form-control(type="text", maxlength="8")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-12
+						h4 Datos del Asegurado Titular
+						p.label Haga clic 
+							span 
+								a(herf="#") aquí 
+							| si los Datos del Asegurado Titular son los mismos del Contratante.
+						hr
+					.col-md-4
+						label Nombre(s)
+						input.form-control(type="text",nombre="nombretkmQ")
+					.col-md-4
+						label Apellido Paterno
+						input.form-control(type="text",nombre="apellidoPtkmQ")
+					.col-md-4
+						label Apellido Materno
+						input.form-control(type="text",nombre="ApellidoMtkmQ")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						.div
+							p.label Fecha de nacimiento
+						.col-xs-3.sinLeft
+							input#day.form-control(type='text', maxlength="2", placeholder="DD")
+						.col-xs-4
+							input#moth.form-control(type='text', maxlength="2", placeholder="MM")
+						.col-xs-4
+							input#year.form-control(type='text', maxlength="4", placeholder="AAAA")
+					.col-md-4
+						label R.F.C.
+						input.form-control(type="text",nombre="rfctkmQ")
+					.col-md-4
+						label CURP
+						input.form-control(type="text",nombre="curptkmQ")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-2.text-center
+						p.label Genero *
+						.radio
+							input.pregDom(type='radio',id="radioATM",name='genero',value='Hombre', class="regular-radio",checked='true')
+							label(for='radioATM')
+							label 
+								h4 M
+					.col-md-2.text-center
+						p.label  
+						.radio
+							input.pregDom(type='radio',id="radioATF",name='genero',value='Mujer', class="regular-radio")
+							label(for='radioATF')
+							label 
+								h4 F
+					.col-md-4
+						p.label Estado civil *
+						select#uso.form-control
+							option(value="") Elija un estado civil
+							option(value="opcion-1",nombre="") Casado
+							option(value="opcion-2",nombre="") Divorciado
+							option(value="opcion-3",nombre="") Soltero
+							option(value="opcion-3",nombre="") Unión libre
+							option(value="opcion-3",nombre="") Viudo
+					.col-md-2
+						label Peso (Kg) *
+						input.form-control(type="text")
+					.col-md-2
+						label Estatura (cm) *
+						input.form-control(type="text")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						label País Nacionalidad *
+						select.form-control
+							option(value="") País
+							option(value="opcion-1",nombre="") 
+					.col-md-4
+						label País residencia *
+						select.form-control
+							option(value="") País
+							option(value="opcion-1",nombre="") 
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						label Correo Electrónico *
+						input.form-control(type="text")
+					.col-md-4
+						label Ocupacion Actual *
+						.input-group
+							input.form-control(type="text")
+							span.input-group-btn
+								button.btn.btn-info Buscar
+					.col-md-4
+						label Seleccione una ocupación
+						select.form-control
+							option(value="") Elija ocupación
+							option(value="opcion-1",nombre="")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						label Actividad o giro del negocio  en el que labora actualmente *
+						.input-group
+							input.form-control(type="text")
+							span.input-group-btn
+								button.btn.btn-info Buscar
+					.col-md-4
+						label Seleccione una Actividad o giro *
+						select.form-control
+							option(value="") Elija ocupación
+							option(value="opcion-1",nombre="")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-12
+						h4 Domicilio del Titular
+						p.label Haga clic 
+							span 
+								a(herf="#") aquí 
+							| si el Domicilio del Asegurado Titular son los mismos del Contratante.
+						hr
+					.col-md-6
+						label Calle *
+						input.form-control(type="text")
+					.col-md-3
+						label Número Exterior
+						input.form-control(type="text")
+					.col-md-3
+						label Número interior
+						input.form-control(type="text")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						label Codigo Postal *
+						.input-group
+							input.form-control(type="text")
+							span.input-group-btn
+								button.btn.btn-info Buscar
+					.col-md-4
+						label Colonia *
+						select.form-control
+							option(value="") Elija una Colonia
+							option(value="opcion-1",nombre="")
+					.col-md-4
+						label Delegación o Municipio
+						input.form-control(type="text", disabled="")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						label Ciudad
+						input.form-control(type="text", disabled="")
+					.col-md-4
+						label Estado
+						input.form-control(type="text", disabled="")
+					.col-md-4
+						label ¿Entre que calles? *
+						input.form-control(type="text")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						.div
+							label Horario de entrega
+						.col-xs-5
+							select.form-control
+								option(value="") hr
+								option(value="opcion-1",nombre="")
+						.col-xs-2
+							label a
+						.col-xs-5
+							select.form-control
+								option(value="") hr
+								option(value="opcion-1",nombre="")
+					.col-md-8
+						label Observaciones para la entrega de documentos *
+						input.form-control(rows="2")
+					
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						.div
+							label Telefono 1 *
+						.col-xs-4
+							input.form-control(type="text", maxlength="2")
+						.col-xs-8
+							input.form-control(type="text", maxlength="8")
+					.col-md-4
+						.div
+							label Telefono 2 *
+						.col-xs-4
+							input.form-control(type="text", maxlength="2")
+						.col-xs-8
+							input.form-control(type="text", maxlength="8")
+			.row
+				.col-md-offset-1.col-md-10.text-center
+					.col-md-3
+					.col-md-6
+						button.btn.btn-info.solid Insertar domicilio de correspondencia
+					.col-md-3
+						button.btn.btn-info.solid Continuar
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-12
+						h4 Domicilio de Correspondencia
+						hr
+					.col-md-6
+						label Calle *
+						input.form-control(type="text")
+					.col-md-3
+						label Número Exterior
+						input.form-control(type="text")
+					.col-md-3
+						label Número interior
+						input.form-control(type="text")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						label Codigo Postal *
+						.input-group
+							input.form-control(type="text")
+							span.input-group-btn
+								button.btn.btn-info Buscar
+					.col-md-4
+						label Colonia *
+						select.form-control
+							option(value="") Elija una Colonia
+							option(value="opcion-1",nombre="")
+					.col-md-4
+						label Delegación o Municipio
+						input.form-control(type="text", disabled="")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						label Ciudad
+						input.form-control(type="text", disabled="")
+					.col-md-4
+						label Estado
+						input.form-control(type="text", disabled="")
+					.col-md-4
+						label ¿Entre que calles? *
+						input.form-control(type="text")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						.div
+							label Horario de entrega
+						.col-xs-5
+							select.form-control
+								option(value="") hr
+								option(value="opcion-1",nombre="")
+						.col-xs-2
+							label a
+						.col-xs-5
+							select.form-control
+								option(value="") hr
+								option(value="opcion-1",nombre="")
+					.col-md-8
+						label Observaciones para la entrega de documentos *
+						input.form-control(rows="2")
+					
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						.div
+							label Telefono 1 *
+						.col-xs-4
+							input.form-control(type="text", maxlength="2")
+						.col-xs-8
+							input.form-control(type="text", maxlength="8")
+					.col-md-4
+						.div
+							label Telefono 2 *
+						.col-xs-4
+							input.form-control(type="text", maxlength="2")
+						.col-xs-8
+							input.form-control(type="text", maxlength="8")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-12
+						h4 Consentimiento de Datos Sensibles.
+					.col-md-12
+						input(type="checkbox",id="checkbox-Acepto" class="regular-checkbox big-checkbox")
+						label(for="checkbox-Acepto")
+						span.acepto Si, Acepto 
+			.row
+				.col-md-offset-1.col-md-10.text-center
+					.col-md-3
+					.col-md-6
+						button.btn.btn-info.solid eliminar domicilio de correspondencia
+					.col-md-3
+						button.btn.btn-info.solid Continuar
+			
+	h1 Pago
+		hr
+		.container.bgwhite
+			.row
+				.col-md-offset-1.col-md-10
+					h4 Opciones de pago
+					p Completa la información de las secciones que a continuación te presentamos
+					hr
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						label Tipo de pago
+						select.form-control
+							option(value="") Elija 
+							option(value="opcion-1",nombre="")
+					.col-md-8
+						label Nombre del tarjetahabiente
+						input.form-control(type="text",placeholder="Nombre del tarjetahabiente")
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						label Numero de tarjeta
+						input.form-control(type="text",placeholder="Numero de tarjeta")
+					.col-md-3
+						label Codigo de seguridad
+						input.form-control(type="text",placeholder="Codigo de seguridad")
+					.col-md-3
+						label Fecha vencimiento
+						select.form-control
+							option(value="") Elija mes
+							option(value="opcion-1",nombre="")
+					.col-md-2
+						label(style="color:#fff;") ok  
+						select.form-control
+							option(value="") Elija año
+							option(value="opcion-1",nombre="")
+					
+			.row
+				.col-md-offset-1.col-md-10.text-center
+					.col-md-3
+					.col-md-3
+						button.btn.btn-info.solid Regresar
+					.col-md-3
+						button.btn.btn-info.solid Continuar
+
+	h1 Resumen
+		hr
+		.container.bgwhite
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-12
+						h4 Resumen
+						hr
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						h2 Folio de cotización: CG18E290025
+					.col-md-4
+						h2 Precio de la Póliza: $ precio.00
+					.col-md-4
+						h2 29 de Enero de 2018
+			.row
+				.col-md-offset-1.col-md-10
+					p.label Estimado cliente: Por favor revise la información de compra de su seguro. Si sus datos son correctos, presione el botón Pagar; en caso contrario, refiérase al paso correspondiente para modificar el dato incorrecto y posteriormente regrese a este paso para concluir su compra.
+			.space
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-12
+						h4 Plan Cotizado
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						h2 Suma asegurada:
+						h5.labelgral2 $ precio.00
+					.col-md-5
+						h2 Fecha nacimiento Titular:
+						h5.labelgral2 10/10/2060
+					.col-md-3
+						h2 Genero:
+						h5.labelgral2 dato
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						h2 Edad:
+						h5.labelgral2 dato
+					.col-md-8
+						h2 Ocupación actual:
+						h5.labelgral2 petrolero en petroleo
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						h2 Código Postal:
+						h5.labelgral2 dato
+
+			.space
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-12
+						h4 A pagar
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						h2 Forma de Pago:
+						h5.labelgral2 Semestral
+					.col-md-5
+						h2 Primer Pago:
+						h5.labelgral2 $ dato
+					.col-md-3
+						h2 Pagos restantes:
+						h5.labelgral2 dato
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						h2 Total a pagar:
+						h5.labelgral2 $ dato
+			
+			.space
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-12
+						h4 Datos del Contratante
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-8
+						h2 Nombre Completo:
+						h5.labelgral2 $ precio.00
+					.col-md-4
+						h2 RFC:
+						h5.labelgral2 Dato
+					
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						h2 CURP:
+						h5.labelgral2 dato
+					.col-md-4
+						h2 Genero:
+						h5.labelgral2 dato
+					.col-md-4
+						h2 Estado Civil:
+						h5.labelgral2 Dato
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						h2 País Residencia:
+						h5.labelgral2 dato
+					.col-md-8
+						h2 Correo electrónico:
+						h5.labelgral2 dato
+			.space
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-12
+						h4 Domicilio del Contratante
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-8
+						h2 Domicilio Completo:
+						h5.labelgral2 $ precio.00
+					.col-md-4
+						h2 Codigo Postal:
+						h5.labelgral2 Dato
+					
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-8
+						h2 ¿Entre qué calles?:
+						h5.labelgral2 dato
+					.col-md-4
+						h2 Horarios de entrega:
+						h5.labelgral2 dato
+					.col-md-8
+						h2 Observaciones para la entrega de documentos:
+						h5.labelgral2 Dato
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						h2 Teléfono 1:
+						h5.labelgral2 dato
+					.col-md-4
+						h2 Teléfono 2:
+						h5.labelgral2 dato
+
+			.space
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-12
+						h4 Datos del Asegurado Titular
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-8
+						h2 Nombre Completo:
+						h5.labelgral2 $ precio.00
+					.col-md-4
+						h2 RFC:
+						h5.labelgral2 Dato
+					
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						h2 CURP:
+						h5.labelgral2 dato
+					.col-md-4
+						h2 Genero:
+						h5.labelgral2 dato
+					.col-md-4
+						h2 Estado Civil:
+						h5.labelgral2 Dato
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						h2 País Residencia:
+						h5.labelgral2 dato
+					.col-md-8
+						h2 Correo electrónico:
+						h5.labelgral2 dato
+			.space
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-12
+						h4 Domicilio del Asegurado Titular
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-8
+						h2 Domicilio Completo:
+						h5.labelgral2 $ precio.00
+					.col-md-4
+						h2 Codigo Postal:
+						h5.labelgral2 Dato
+					
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-8
+						h2 ¿Entre qué calles?:
+						h5.labelgral2 dato
+					.col-md-4
+						h2 Horarios de entrega:
+						h5.labelgral2 dato
+					.col-md-8
+						h2 Observaciones para la entrega de documentos:
+						h5.labelgral2 Dato
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						h2 Teléfono 1:
+						h5.labelgral2 dato
+					.col-md-4
+						h2 Teléfono 2:
+						h5.labelgral2 dato
+
+			.space
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-12
+						h4 Domicilio de Correspondencia
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-8
+						h2 Domicilio Completo:
+						h5.labelgral2 $ precio.00
+					.col-md-4
+						h2 Codigo Postal:
+						h5.labelgral2 Dato
+					
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-8
+						h2 ¿Entre qué calles?:
+						h5.labelgral2 dato
+					.col-md-4
+						h2 Horarios de entrega:
+						h5.labelgral2 dato
+					.col-md-8
+						h2 Observaciones para la entrega de documentos:
+						h5.labelgral2 Dato
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-4
+						h2 Teléfono 1:
+						h5.labelgral2 dato
+					.col-md-4
+						h2 Teléfono 2:
+						h5.labelgral2 dato
+			//- Beneficiarios************************************************
+			.space
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-12
+						h4 Beneficiarios
+			.space
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-12
+						h4 Datos del pago de Tarjeta de Crédito
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-8
+						h2 Nombre del Tarjetahabiente:
+						h5.labelgral2 Dato
+					.col-md-4
+						h2 Número de tarjeta:
+						h5.labelgral2 Dato
+					
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-8
+						h2 Fecha vencimiento:
+						h5.labelgral2 dato
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-8
+						p.label Los precios presentados incluyen 16% de IVA
+			.row
+				.col-md-offset-1.col-md-10
+						.space
+					.col-md-offset-8.text-center
+					.col-md-4.text-center
+						button.btn.btn-info.solid Pagar
+					.col-md-12
+						.space
+	h1 Fin
+		hr
+		.container.bgwhite
+			.row
+				.col-md-offset-1.col-md-10
+					.col-md-12
+						hr
+					.col-md-12
+						.panel.panel-default
+							.panel-body
+								.col-md-12
+									h5.labelgral2 ¡Felicidades! Acabas de contratar tu Seguro.
+									br
+									h5.labelgral2 Hemos enviado la Póliza y las condiciones generales a tu correo electrónico: 
+										strong  xxxx@gmail.com
+									br
+									h5.labelgral2 Tu número de póliza: xxxxxxx
+									br
+									h5.labelgral2 Úsalo paea consultar cualquier duda o consultar cambios.
+									br
+			.row
+				.col-md-offset-1.col-md-10.text-center
+					.col-md-offset-9.col-md-3
+						button.btn.btn-info.solid Finalizar
+
+
+	script(src="http://code.jquery.com/jquery.js")
+	script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+	script(src="../js/app.js")
+	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
